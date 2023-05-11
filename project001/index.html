@@ -1,61 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>철도박물관</title>
     <!-- 그리드가이드연결 -->
-    <link rel="stylesheet" href="css/grid-guide.css">
+    <!-- <link rel="stylesheet" href="css/grid-guide.css"> -->
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script> 
 </head>
+
 <body>
-    <header>
-        <div class="boxA">
-            <div class="box1">로고</div>
-            <div class="box2">메뉴</div>
+    <header class="boxA">
+        <div class="navBar">
+            <div class="box1">
+                <h1 class="logo"><img src="img/logo_01.png" alt=""></h1>
+            </div>
+            <div class="box2">
+                <nav class="menu">
+                    <ul>
+                        <li>이용안내</li>
+                        <li>전시안내</li>
+                        <li>행사·교육</li>
+                        <li>참여마당</li>
+                        <li>박물관소개</li>
+                    </ul>
+                </nav>
+                <nav class="menuBtn">
+                    <ul>
+                        <li>로그인</li>
+                        <li>KOR</li>
+                        <li>검색</li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="box2">hero</div>
-        <div class="box2">관람안내</div>
+
+
+        <div class="box2">
+            <div class="hero">
+                <h1>철도박물관과 함께하는<br>
+                    철도 역사 여행</h1>
+                <p>철도역사가 살아 숨쉬고 있는 철도문화의 전당으로 떠나보세요</p>
+                <img src="img/hero_001.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="box3">
+            <div class="reser">
+                <div class="reserBox">
+                    <ul>
+                        <li>
+                            <img src="img/clock.png" alt="">
+                            관람시간 <span>9:00 ~ 18:00</span></li>
+                        <li>
+                            <img src="img/calender.png" alt="">
+                            휴관일 <span>매주 월요일</span></li>
+                    </ul>
+                </div>
+                <div class="reserBtn">
+                    <button>예약하기</button>
+                    <button>관람안내</button>
+                </div>
+            </div>
+        </div>
     </header>
-    <section class>
-        <article class="box1">
-            <div class="box1-1">시설안내</div>
-            <div class="box1-2">상세내용</div>
-            <div class="box1-3">img선택버튼</div>
-        </article>
-        <article class="box2">
-            <div class="box2-1">행사및교육</div>
-            <div class="box2-2">검색</div>
-            <div class="box2-3">
-                <div class="box2-3-1">상세설명</div>
-                <div class="box2-3-2">포스터이미지</div>
-            </div>
-        </article>
-        <article class="box3">
-            <div class="box3-1">포토갤러리</div>
-            <div class="box3-2">imgslide</div>
-        </article>
+
+
+
+    <section class="boxB">
         <article class="box4">
-            <div class="box4-1">공지참여</div>
+            <div class="box4-1">
+                <div class="info">
+                    <h2>시설안내</h2>
+                    <p>철도박물관의 주요 시설을 소개합니다.</p>
+                </div>
+            </div>
             <div class="box4-2">
-                <div class="box4-2-1">공지,자주하는질문</div>
-                <div class="box4-2-2">이미지</div>
-                <div class="box4-2-3">문의하기</div>
+                <h3>철도박물관은?</h3>
+                <p>철도박물관은 1만여점의 소장품과 각종 자료들이<br>
+                    실내전시관과 야외전시관에 구비되어 있으며,<br> 
+                    탐방명소의 중심으로 새롭게 부각되고 있습니다.</p>
+            </div>
+            <div class="box4-3">
+                <ul>
+                    <li><button>실내전시장</button></li>
+                    <li><button>야외전시장</button></li>
+                    <li><button>디오라마</button></li>
+                    <li><button>운전체험실</button></li>
+                </ul>
             </div>
         </article>
+
         <article class="box5">
-            <div class="box5-1">오시는길</div>
-            <div class="box5-2">map</div>
-            <div class="box5-3">주소</div>
-            <div class="box5-4">
-                <div class="box5-4-1">지하철</div>
-                <div class="box5-4-2">버스</div>
-                <div class="box5-4-3">자가용</div>
+            <div class="box5-1">
+                <h2>행사·교육</h2>
+                <p>유익한 행사 및 교육 프로그램을 체험해 보세요.</p>
+            </div>
+            <div class="box5-2">
+                <div class="search">
+                    <select name="option" id="">
+                        <option value="all" selected>전체</option>
+                        <option value="events">행사</option>
+                        <option value="education">교육</option>
+                    </select>
+                    <input type="text" placeholder="검색어 입력">
+                    <img src="img/search.png" alt="">
+
+                </div>
+            </div>
+            <div class="box5-3">
+                <div class="box5-3-1">
+                    <span>new</span>
+                    <h4>2023 한국철도<br>
+                        어린이 힐링 프로그램 </h4>
+                </div>
+                <div class="box5-3-2">포스터이미지</div>
+            </div>
+        </article>
+        <article class="box6">
+            <div class="box6-1">
+                <h2>포토갤러리</h2>
+            </div>
+            <div class="box6-2">imgslide</div>
+        </article>
+        <article class="box7">
+            <div class="box7-1">
+                <h2>공지·참여</h2>
+            </div>
+            <div class="box7-2">
+                <div class="box7-2-1">공지,자주하는질문</div>
+                <div class="box7-2-2">이미지</div>
+                <div class="box7-2-3">문의하기</div>
+            </div>
+        </article>
+        <article class="box8">
+            <div class="box8-1">
+                <h2>오시는길</h2>
+            </div>
+            <div class="box8-2">map</div>
+            <div class="box8-3">주소</div>
+            <div class="box8-4">
+                <div class="box8-4-1">지하철</div>
+                <div class="box8-4-2">버스</div>
+                <div class="box8-4-3">자가용</div>
             </div>
         </article>
     </section>
     <footer class="boxC">footer</footer>
 </body>
+
 </html>
