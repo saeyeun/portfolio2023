@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+}
+
+
+/* 미디어쿼리구간설정 //////////////////////////*/
+/* 768px 이상구간설정///////////////////////// */
+@media(min-width:768px) {
+    /* 레이아웃설정 */
+
+    /* 박스1과 박스2의 가로정렬 */
+    .boxA {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 박스5-1과 박스5-2의 가로정렬 */
+    .box5 {
+        display: flex;
+    }
+    .box5-1, .box5-2 {
+        width: 50%;
+    }
+
+    /* .box9-1, .box9-2, .box9-3 의 가로정렬 */
+    .box9 {
+        display: flex;
+        justify-content: space-between;
+    }
+    .box9>div {width: 32%;}
+}
