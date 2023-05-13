@@ -146,7 +146,6 @@ body {
     height: 100px;
     position: relative;
 }
-
 .reserBox {
     position: absolute;
     background-color: #fff;
@@ -157,6 +156,7 @@ body {
     transform: translate(-50%);
     display: flex;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
 
 }
 
@@ -168,6 +168,10 @@ body {
 .reserBox ul img {
     width: 20px;
     height: 20px;
+}
+
+.reserBox .reserBtn {
+    display: flex;
 }
 
 
