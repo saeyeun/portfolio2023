@@ -1,9 +1,12 @@
 @charset 'utf-8';
 
 /* 전체설정 */
+
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul,
@@ -25,38 +28,219 @@ body {
     font-size: 14px;
 }
 
-/* 로고설정*/
-.logo {
-    background-image: url(../img/logo_01_Large.png);
+/* 헤더설정 시작----*/
+
+.navBar {
+    position: fixed;
+    display: flex;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+/* logo설정 */
+.navBar h1 {
+    margin-left: 30px;
     width: 180px;
     height: 34px;
+    background-image: url(../img/logo_01_Large.png);
     text-indent: -9999px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-/* gnb설정 */
-.menu ul {display: flex;}
-.menu li a {
+/* 메뉴설정 */
+.menu ul {
+    display: flex;
+}
+
+.menu ul a {
+    padding: 10px 30px;
     display: block;
-    padding: 10px 32px;
-}   
-.menuBtn {display: flex;}
+    color: #fff;
+}
+
+.icons ul {
+    display: flex;
+    margin-right: 30px;
+}
+
+.icons ul a {
+    display: block;
+    padding: 8px 11px;
+    color: #fff;
+}
+
+/* hero 설정  */
+
+.hero {
+    background-color: aqua;
+}
+
+.hero_img {
+    top: 0;
+    width: 100%;
+    height: 695px;
+    overflow: hidden;
+    position: relative;
+}
+.hero .hero_img img {
+    width: 100%;
+    height: 786px;
+    transform: translateY(-90px);
+
+}
+
+.hero .hero_img .slogan {
+    position: absolute;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.slogan h2 {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+
+.slogan p {
+    font-size: 18px;
+    line-height: 2;
+    padding-top: 18px;
+}
+
+/* hero 화살표 설정 */
+
+
+.hero_arrow span {
+    position: absolute;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero_arrow .hero_left {
+    left: 30px;
+}
+
+.hero_arrow .hero_right {
+    right: 30px;
+}
+
+
+/* 예약안내 부분 설정 */
+.reser_wrap {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.reser_wrap .reserBox {
+    position: absolute;
+    background-color: #fff;
+    height: inherit;
+    width: 70%; 
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+
+}
+
+.reserBox ul {
+    display: flex;
+    align-items: center;
+}
+
+.reserBox ul img {
+    width: 20px;
+    height: 20px;
+}
+
+.reserBox .reserBtn {
+    display: flex;
+}
+
+
+/* title */
+.title {
+    color: #5c82ee;
+    font-weight: 700;
+    text-align: center;
+}
+.subTitle {
+    text-align: center;
+}
+
+
+/* 시설안내 Tab바*/
+
+.info {
+    border:#000 1px solid;
+    padding: 20px;
+}
+
+.info .infoTitle p {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 미디어쿼리구간설정///////////////// */
 /* 768px 이상구간설정//////////////// */
-@media(min-width:768px) {
+@media(min-width:768px) {}
     /* 레이아웃설정 */
 
     /*박스1과 박스2 가로정렬  */
-    .boxA {
-        display: flex;
-    }
 
     /* 박스2-3-1과박스2-3-2  (상세설명,포스터이미지) 가로정렬*/
-    .box2-3 {
-        display: flex;}
-    .box2-3-1, .box2-3-2 {
-        width:50%;
+
+
+/* 1040px이상일 때 /////////////////////////2// */
+@media (min-width:1040px) {
+        {
+        width: 1100px;
+        margin: 0 auto;
     }
 }

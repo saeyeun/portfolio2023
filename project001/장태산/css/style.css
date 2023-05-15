@@ -203,6 +203,60 @@ color: #006837;}
 
 
 
+/* 주변관광안내 설정 */
+.tour{
+    background-color:rgba(241, 90, 37, 0.1);
+    padding: 20px 40px;
+}
+.tour p  {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.tour ul {
+    display: flex;
+}
+.tour li {
+    padding: 20px;
+    color: #bbb;
+}
+
+.tour .imgBox {
+    background-color: #006837;
+    margin-top: 20px;
+    position: relative;
+    height: 380px;
+}
+.tour .imgBox>div {
+    display: flex;
+    align-items: center;
+    position: absolute; /*relative*/
+    height: 380px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.tour .imgBox>div.on {
+    display: flex;
+}
+
+
+.tour .imgBox a {
+    display: block;
+    padding: 20px 40px;
+    background-color: #f15a25;
+    color: #fff;
+    font-size: 18px;
+}
+.tour .imgBox img {
+    position: absolute;
+    right: -100px;
+    top: 50px;
+}
+
+
 
 
 /* 박스위아래 여백설정 */
@@ -211,6 +265,10 @@ color: #006837;}
 }
 
 .box4 {
+    padding-bottom: 40px;
+}
+
+.box5 {
     padding-bottom: 40px;
 }
 
@@ -254,7 +312,7 @@ color: #006837;}
 
 /* 1040px이상일 때/////////////////////////////// */
 @media (min-width:1040px) {
-    header, .box3-2, .box4-1, .box5 {
+    header, .box3-2, .box4-1, .box5, .box6 {
         width: 1100px;
         margin: 0 auto;
     }

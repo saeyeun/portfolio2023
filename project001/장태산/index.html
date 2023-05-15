@@ -10,6 +10,34 @@
     <!-- <link rel="stylesheet" href="css/grid-guide.css"> -->
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+    
+            //listTitle의 li를 클릭했을 때, 각 순번에 맞는 listBox의 ul이 보여라
+            $('.tour li').click(function(){
+    
+                // 변수만들기(순번찾기)
+                let a =$(this).index()
+                console.log(a)
+    
+            $('.imgBox>div').hide()
+            $('.imgBox>div').eq(a).show()
+    
+    
+    
+    
+    
+            })
+    
+    
+    
+    
+    
+        })
+    </script>
+
 </head>
 
 <body>
@@ -78,7 +106,10 @@
                 <p>대전장태산휴양림 주소</p>
             </div>
         </article>
-        <article class="box6">
+
+
+        <!-- 탭바 -->
+        <article class="box6 tour">
             <div class="box6-1">
                 <h1 class="title">
                     주변관광안내
@@ -102,18 +133,21 @@
             </div>
             <div class="box6-3">
                 <div class="imgBox">
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
-                    <div><a href="#">바로가기</a><img src="" alt=""></div>
+                    <div class="on"><a href="#">1.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div class="on"><a href="#">2.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">3.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">4.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">5.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">6.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">7.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">8.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">9.바로가기</a><img src="https://picsum.photos/1000/280" alt=""></div>
                 </div>
             </div>
         </article>
+
+
+        
         <article class="box7">
             <div class="box7-1">
                 <h1 class="title">notice</h1>
