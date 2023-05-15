@@ -186,6 +186,7 @@ body {
 }
 
 
+<<<<<<< HEAD
 /* title */
 .title {
     color: #5c82ee;
@@ -208,6 +209,8 @@ body {
     margin-bottom: 20px;
 }
 
+=======
+>>>>>>> 0b86ae7e17f3fda461e64b1085726b073180bc0a
 
 
 
@@ -239,7 +242,11 @@ body {
 
 /* 1040px이상일 때 /////////////////////////2// */
 @media (min-width:1040px) {
+<<<<<<< HEAD
         {
+=======
+        .hero_arrow {
+>>>>>>> 0b86ae7e17f3fda461e64b1085726b073180bc0a
         width: 1100px;
         margin: 0 auto;
     }
