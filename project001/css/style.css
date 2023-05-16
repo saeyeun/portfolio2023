@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 /* 전체설정 */
 
@@ -25,8 +26,22 @@ img {
 }
 
 body {
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
 }
+
+
+/* title */
+.title {
+    color: #5c82ee;
+    font-weight: 700;
+    text-align: center;
+}
+.subTitle {
+    text-align: center;
+}
+
+
 
 /* 헤더설정 시작----*/
 
@@ -60,10 +75,29 @@ body {
 }
 
 .menu ul a {
-    padding: 10px 30px;
+    padding: 10px 20px;
+    margin: 0 10px;
     display: block;
     color: #fff;
+    position: relative;
 }
+
+.menu ul li a::after {
+    content: "";
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 4px;
+    background: #fff;
+    transition: all .5s ease-out;
+}
+
+.menu ul li a:hover:after {
+    width: 70%;
+}
+
 
 .icons ul {
     display: flex;
@@ -74,6 +108,10 @@ body {
     display: block;
     padding: 8px 11px;
     color: #fff;
+}
+
+.icons ul span {
+    padding-right: 10px;
 }
 
 /* hero 설정  */
@@ -160,20 +198,34 @@ body {
 .reser_wrap .reserBox {
     position: absolute;
     background-color: #fff;
-    height: inherit;
-    width: 70%; 
+    width: 50%; 
+    height: 102px;
     top: -50%;
     left: 50%;
     transform: translate(-50%);
     display: flex;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
     justify-content: space-around;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 
 }
 
 .reserBox ul {
-    display: flex;
+    display: flex;  
     align-items: center;
+}
+
+.reserBox ul li {
+    font-size: 18px;
+}
+
+.reserBox ul li span {
+    font-size: 16px;
+    padding-left: 14px;
+}
+
+.reserBox .reserTxt li:nth-child(2) {
+    margin-left: 50px;
 }
 
 .reserBox ul img {
@@ -185,32 +237,279 @@ body {
     display: flex;
 }
 
-
-<<<<<<< HEAD
-/* title */
-.title {
-    color: #5c82ee;
-    font-weight: 700;
-    text-align: center;
-}
-.subTitle {
-    text-align: center;
+.reserBox .reserBtn ul li {
+    font-size: 16px;
+    margin-left: 20px;
+    color: #fff;
 }
 
+.reserBox .reserBtn li:nth-child(1) {
+    background-color: #5c82ee;
+    border-radius: 20px;
+    padding: 10px 26px;
+}
+.reserBox .reserBtn li:nth-child(2) {
+    background-color: #F89939;
+    border-radius: 20px;
+    padding: 10px 26px;
+}
 
-/* 시설안내 Tab바*/
 
+
+/* info설정 */
 .info {
-    border:#000 1px solid;
-    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: 770px;
+    }
+    .info .infoTitle {
+        text-align: center;
+        width: 100%;
+    }
+    .info_contents {
+        margin-top: 128px;
+    }
+    
+    
+    .infoTxt {
+        left: 45%;
+        position: absolute;
+        background-color: #FFEEAC;
+        width: 664px;
+        height: 368px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 80px 30px 250px;
+    }
+    
+    
+    .imgTab_wrap {
+        position: relative;
+        background-color:#F0F4FF;
+        top: 200px;
+        width: 802px;
+        height: 310px;
+    }
+    
+    .imgTab {
+        position: absolute;
+        margin-top: 50px;
+        left: 25%;
+        top: -50%;
+    }
+    
+    
+    
+    .info .imgBox {
+        position: relative;
+        width: 554px;
+        height: 334px;
+        
+    }
+    
+    .info .imgBox>div {
+        left: 45%;
+        width: 100%;
+        height: 334px;
+        display: flex;
+        left: 0;
+        top: 0;
+        align-items: center;
+        display: none;
+    
+    }
+    
+    .info .imgBox>div.on {
+        display: flex;
+    }
+    
+    .info .imgTab .imgBox a {
+        display: block;
+    }
+    .info .imgTab .imgBox img {
+    
+    }
+    
+    
+    
+    .info .tabBar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+    }   
+    
+    .info .tabBar ul {
+        display: flex;
+    }   
+    
+    .info .tabBar ul li {
+        background-color: #fff;
+        border: #5c82ee 1px solid;
+        border-radius: 30px;
+        padding: 10px 20px;
+        margin-right: 24px;
+    }  
+    
+
+
+/* 행사 및 교육 */
+
+
+
+
+
+
+
+
+/*배경이미지 */
+.box6 img {
+    width: 100%;
 }
 
-.info .infoTitle p {
-    margin-bottom: 20px;
+/* 포토갤러리 */
+.photo_wrap {
+    background-color: #5c82ee;
 }
 
-=======
->>>>>>> 0b86ae7e17f3fda461e64b1085726b073180bc0a
+
+.photoTitle {
+    color: #fff;
+}
+
+.photoTitle  h2{
+    color: #fff;
+}
+
+
+.box6 .box6-2 .trailer ul li img {
+    width: 420px;
+}
+
+
+/* 공지&참여 */
+
+.box7 {
+    width: 100%;
+
+}
+
+
+.box7-2 {
+}
+
+.notice {
+
+    width: 50%;
+}
+
+.notice .listTitle {
+    display: flex;
+    text-align: center;
+}
+
+.notice .listTitle ul {
+    display: flex;
+
+}
+
+.notice .listTitle li {
+    padding: 10px 20px;
+    border: #5c82ee 2px solid;
+    border-radius: 20px;
+    margin-right: 3px;
+}
+
+
+.notice .listTitle li .on {
+    background-color: #5c82ee;
+}
+
+.popup_img {
+    background-image: url(../img/popup_img.png);
+    width: 470px;
+    height: 280px;
+}
+
+.qna_wrap {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+.notice .listBox li:nth-child(-n+3):after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: #7b7b7b 1px solid;
+    padding-top: 10px;
+    
+}
+.notice .listBox li:nth-child(1):before {
+    content: "";
+    display: block;
+    border-top: #5c82ee 2px solid;
+    width: 450px; 
+    padding: 10px;
+
+}
+.notice .listBox li:nth-child(4):after {
+    content: "";
+    display: block;
+    border-bottom: #5c82ee 2px solid; 
+    width: auto;
+    padding: 10px;
+
+}
+
+.notice .listBox {
+    width: 677px; 
+    position: absolute; 
+}
+
+
+.notice .listBox ul {
+    position: absolute;
+    top: 56px;
+    display: none;
+
+}
+
+
+.notice .listBox ul.on {
+    display: block;
+}
+
+
+.notice .listBox ul li {
+    display: block;
+}
+
+.notice .listBox ul li:nth-child(4) {
+    border-width: 0;
+}
+
+
+/* 팝업이미지 */
+
+.box7 .box7-2-2 {
+    width: 470px;
+    height: 280px;
+}
+
+/* 문의하기 */
+.box7 .box7-2-3 {
+    background-color: #F89939;
+    width: 300px;
+    margin-top: 10px;
+    padding: 18px;
+}
+
+/* 오시는길 */
+.
+
 
 
 
@@ -235,19 +534,27 @@ body {
 @media(min-width:768px) {}
     /* 레이아웃설정 */
 
-    /*박스1과 박스2 가로정렬  */
 
     /* 박스2-3-1과박스2-3-2  (상세설명,포스터이미지) 가로정렬*/
+    .program {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    /* 공지 참여 가로정렬 */
+.notice {
+    width: 50%;
+    float: left;
+}
 
 /* 1040px이상일 때 /////////////////////////2// */
 @media (min-width:1040px) {
-<<<<<<< HEAD
-        {
-=======
-        .hero_arrow {
->>>>>>> 0b86ae7e17f3fda461e64b1085726b073180bc0a
-        width: 1100px;
+
+        
+        .box5, .box7 {
+        width: 1500px;
         margin: 0 auto;
     }
+
+
 }
