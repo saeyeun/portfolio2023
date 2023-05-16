@@ -31,6 +31,7 @@ body {
 }
 
 
+
 /* title */
 .title {
     color: #5c82ee;
@@ -38,7 +39,9 @@ body {
     text-align: center;
 }
 .subTitle {
+    margin-top: 20px;
     text-align: center;
+    color: #7b7b7b;
 }
 
 
@@ -235,26 +238,39 @@ body {
 
 .reserBox .reserBtn {
     display: flex;
+
 }
 
 .reserBox .reserBtn ul li {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 20px;
     color: #fff;
+    cursor: pointer;
 }
+
+
 
 .reserBox .reserBtn li:nth-child(1) {
     background-color: #5c82ee;
     border-radius: 20px;
     padding: 10px 26px;
+    transition: all 0.3s;
 }
+
+.reserBox .reserBtn li:nth-child(1):hover {
+    background-color: #3163ed;
+}
+
 .reserBox .reserBtn li:nth-child(2) {
-    background-color: #F89939;
+    background-color: #F89939; 
     border-radius: 20px;
     padding: 10px 26px;
+    transition: all 0.3s;
 }
 
-
+.reserBox .reserBtn li:nth-child(2):hover {
+    background-color: #ff8409;
+}
 
 /* info설정 */
 .info {
@@ -356,8 +372,18 @@ body {
 
 /* 행사 및 교육 */
 
+.box5 .box5-3-2 {
+    display: flex;
+}
 
+.box5 .box5-3-2 .poster_01 {
+    position: relative;
+}
 
+.box5 .box5-3-2 .poster_02 {
+    position: absolute;
+    
+}
 
 
 
@@ -373,15 +399,13 @@ body {
     background-color: #5c82ee;
 }
 
-
-.photoTitle {
-    color: #fff;
-}
-
 .photoTitle  h2{
     color: #fff;
 }
 
+.photoTitle .subTitle {
+    color: #fff;
+}
 
 .box6 .box6-2 .trailer ul li img {
     width: 420px;
