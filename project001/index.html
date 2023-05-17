@@ -103,12 +103,6 @@
                             <h2>철도박물관과 함께하는<br>
                                 철도 역사 여행</h2>
                             <p>철도역사가 살아 숨쉬고 있는 철도문화의 전당으로 떠나보세요</p>
-
-                        <div class="slogan">
-                            <h2>철도박물관과 함께하는<br>
-                                철도 역사 여행</h2>
-                            <p>철도역사가 살아 숨쉬고 있는 철도문화의 전당으로 떠나보세요</p>
-                        </div>
                         <div class="hero_arrow">
                             <span class="hero_left"><</span>
                             <span class="hero_right">></span>
@@ -153,6 +147,9 @@
                     <h2 class="title">시설안내</h2>
                     <p class="subTitle">철도박물관의 주요 시설을 소개합니다.</p>
                 </div>
+                <div class="info_bg">
+                    <h4>railroad</h4>
+                </div>
                 <div class="info_contents">
                     <div class="infoTxt_wrap">
                         <div class="infoTxt">
@@ -160,7 +157,7 @@
                             <p>철도박물관은 1만여점의 소장품과 각종 자료들이<br>
                                 실내전시관과 야외전시관에 구비되어 있으며,<br>
                                 탐방명소의 중심으로 새롭게 부각되고 있습니다.</p>
-                            <p>자세히보기</p>
+                            <p class="more">자세히보기</p>
                         
                             </div>
                     </div>
@@ -196,7 +193,6 @@
                         <p class="subTitle">유익한 행사 및 교육 프로그램을 체험해 보세요.</p>
                     </div>
                     <div class="box5-2">
-                        <div class="search">
                             <select name="option" id="">
                                 <option value="all" selected>전체</option>
                                 <option value="events">행사</option>
@@ -204,12 +200,11 @@
                             </select>
                             <input type="text" placeholder="검색어 입력">
                             <i class="fa fa-search" aria-hidden="true"></i>
-                        </div>
                     </div>
                     <div class="box5-3">
                         <div class="program">
                             <div class="box5-3-1">
-                                <div class="txtBox">
+                                <div class="txtBox1">
                                     <span>new</span>
                                     <h4>2023 한국철도<br>
                                         어린이 힐링 프로그램 </h4>
@@ -217,6 +212,32 @@
                                         2023.05.05 ~ 2023.05.07</p>
                                     <p><em>장소</em>
                                         철도박물관 실내 및 야외전시장</p>
+                                    <div class="moreBtn">
+                                        <button>자세히보기</button>
+                                    </div>
+                                </div>
+
+                                <div class="txtBox2">
+                                    <span>진행중</span>
+                                    <h4>제 10회 철도박물관<br>
+                                        기념행사 </h4>
+                                    <p><em>기간</em>
+                                        2023.04.08 ~ 2023.04.22</p>
+                                    <p><em>장소</em>
+                                        철도박물관 실내 및 야외전시장</p>
+                                    <div class="moreBtn">
+                                        <button>자세히보기</button>
+                                    </div>
+                                </div>
+
+                                <div class="txtBox3">
+                                    <span>종료</span>
+                                    <h4>우리가 그려요,<br>
+                                        의왕철도박물관 </h4>
+                                    <p><em>기간</em>
+                                        2023.03.10 ~ 2023.03.31</p>
+                                    <p><em>장소</em>
+                                        철도박물관 야외전시장</p>
                                     <div class="moreBtn">
                                         <button>자세히보기</button>
                                     </div>
@@ -257,11 +278,11 @@
                                 </div>
                                 <ul>
                                     <li><img src="img/gallery_01.png" alt=""></li>
-                                    <li><img src="" alt=""></li>
-                                    <li><img src="" alt=""></li>
-                                    <li><img src="" alt=""></li>
-                                    <li><img src="" alt=""></li>
-                                    <li><img src="" alt=""></li>
+                                    <li><img src="img/gallery_02.png" alt=""></li>
+                                    <li><img src="img/gallery_03.png" alt=""></li>
+                                    <li><img src="img/gallery_04.png" alt=""></li>
+                                    <li><img src="img/gallery_05.png" alt=""></li>
+                                    <li><img src="img/gallery_06.png" alt=""></li>
                                 </ul>
                             </div>
                         </div>
@@ -304,15 +325,17 @@
                                 <h3>문의하기</h3>
                                 <div class="qnaTxt">
                                     <ul>
-                                        <li><em>문의전화</em> 031-461-3610</li>
-                                        <li><em>1:1 답변</em> 24시간 이내 답변가능</li>
+                                        <li><i class="fa fa-phone fa-flip-horizontal" aria-hidden="true"></i><em>문의전화</em> 031-461-3610</li>
+                                        <li><i class="fa fa-comments" aria-hidden="true"></i><em>1:1 답변</em> 24시간 이내 답변가능</li>
                                     </ul>
-                                    <button>묻고답하기</button>
+                                    <p>묻고답하기</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </article>
+
+
                 <article class="box8">
                     <div class="box8-1">
                         <h2 class="title">오시는길</h2>
@@ -320,36 +343,54 @@
                     </div>
                     <div class="box8-2">map</div>
                     <div class="box8-3">
-                        <h3>경기도 의왕시 철도박물관로 142 (월암동 374-1)</h3>
-                        <p>관람객은 박물관 주차장 무료 이용 가능</p>
+                        <h3><i class="fa fa-map-marker" aria-hidden="true"></i> 경기도 의왕시 철도박물관로 142 (월암동 374-1)</h3>
+                        <p>※관람객은 박물관 주차장 무료 이용 가능</p>
                     </div>
                     <div class="box8-4">
                         <div class="box8-4-1 subway">
+                            <div><i class="fa fa-subway" aria-hidden="true"></i></div>
                             <span>지하철</span>
                             <p>1호선 의왕역 하차</p>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
                             <p>2번 출구로 나와서 우측으로 도보 약 10분</p>
                         </div>
                         <div class="box8-4-2 bus">
+                            <div><i class="fa fa-bus" aria-hidden="true"></i></div>
                             <span>버스</span>
-                            <p>의왕역 2번출구 앞에서 1-1, 1-5, 5번 버스 승차</p>
+                            <p>의왕역 2번출구 앞에서 1-1, 1-5, 5번 버스 승차<br>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i></p>
                             <p>한국교통대학교 앞에서 하차, 도보 약 3분</p>
                         </div>
                         <div class="box8-4-3 car">
+                            <div><i class="fa fa-car" aria-hidden="true"></i></div>
                             <span>자가용</span>
                             <p>영동고속도로 부곡 IC 진출 후, 좌측 출구</p>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
                             <p>의왕역에서 철도박물관 방향</p>
                         </div>
                     </div>
                 </article>
             </section>
-            <footer class="boxC">footer</footer>
+            <footer class="boxC">
+                <div class="boxC-1">
+                    <div class="logo">logo</div>
+                    <div class="adress">
+                        <p>주소 경기도 의왕시 철도박물관로 142</p>
+                        <p>전화번호 031-461-3610</p>
+                        <p>팩스 031-460-4322</p>
+                    </div>
+                </div>
+                <div class="boxC-2">
+                    <div class="footer_icons">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p>관련사이트 바로가기</p>
+                    </div>
+                </div>
+            </footer>
             </body>
-</body>
-
-</body>
-
-<<<<<<< Updated upstream
 </html>
-=======
-</html>
->>>>>>> Stashed changes
