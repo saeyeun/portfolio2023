@@ -1,7 +1,18 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
 
 /* 전체설정 */
 
@@ -28,8 +39,8 @@ img {
 }
 
 body {
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 
@@ -37,13 +48,20 @@ body {
 /* title */
 .title {
     color: #5c82ee;
-    font-weight: 700;
+    font-weight: 900;
     text-align: center;
+    font-size: 40px;
+    letter-spacing: 5.5px;
+    font-family: 'yg-jalnan';
 }
+
 .subTitle {
-    margin-top: 20px;
+    padding-top: 10px;
     text-align: center;
     color: #7b7b7b;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'GmarketSansMedium';
 }
 
 
@@ -85,11 +103,12 @@ body {
     display: block;
     color: #fff;
     position: relative;
+    font-size: 20px;
 }
 
 .menu ul li a::after {
     content: "";
-    position:absolute;
+    position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -132,6 +151,7 @@ body {
     overflow: hidden;
     position: relative;
 }
+
 .hero .hero_img img {
     width: 100%;
     height: 986px;
@@ -199,7 +219,7 @@ body {
 .reser_wrap .reserBox {
     position: absolute;
     background-color: #fff;
-    width: 50%; 
+    width: 50%;
     height: 102px;
     top: -50%;
     left: 50%;
@@ -212,13 +232,14 @@ body {
 }
 
 .reserBox ul {
-    display: flex;  
+    display: flex;
     align-items: center;
 }
 
 .reserBox ul li {
     font-size: 18px;
     padding: 18px 0;
+    color: #2a2a2a;
 }
 
 .reserBox ul li span {
@@ -243,7 +264,7 @@ body {
 }
 
 .reserBox .reserBtn ul li {
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 20px;
     color: #fff;
     cursor: pointer;
@@ -254,7 +275,7 @@ body {
 .reserBox .reserBtn li:nth-child(1) {
     background-color: #5c82ee;
     border-radius: 20px;
-    padding: 10px 26px;
+    padding: 6px 22px;
     transition: all 0.3s;
 }
 
@@ -263,9 +284,9 @@ body {
 }
 
 .reserBox .reserBtn li:nth-child(2) {
-    background-color: #F89939; 
+    background-color: #F89939;
     border-radius: 20px;
-    padding: 10px 26px;
+    padding: 6px 22px;
     transition: all 0.3s;
 }
 
@@ -273,196 +294,321 @@ body {
     background-color: #ff8409;
 }
 
+
+
+
+/* 노란색 텍스트 구간이 움직이지 않고 겹쳐있는 상태로 고정되었으면 좋겠는데 어떻게 해야할까요?/////////////// */
 /* info설정 */
 .info {
     position: relative;
     width: 100%;
     height: 770px;
-    }
-    .info .infoTitle {
-        text-align: center;
-        width: 100%;
-    }
-    .info_contents {
-        margin-top: 128px;
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
-        width: 70%;
-        /* background-color: red; */
-    }
-    
+}
 
-    
-    .infoTxt {
-        background-color: #FFEEAC;
-        width: 664px;
-        height: 368px;
-        /* display: flex;
+.info .infoTitle {
+    text-align: center;
+    width: 100%;
+}
+
+.info_contents {
+    margin-top: 90px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 72%;
+    /* background-color: red; */
+}
+
+
+
+.infoTxt {
+    background-color: #FFEEAC;
+    width: 800px;
+    height: 370px;
+    /* display: flex;
         flex-direction: column;
         justify-content: center; */
-        padding: 100px;
-        padding-left: 300px;
-    }
-    .infoTxt h3 {margin-bottom: 20px;}
-    .infoTxt p {}
-    .infoTxt .more {margin-top: 50px;
-    }
-    
-    .imgTab_wrap {
-        position: absolute;
-        background-color:#F0F4FF;
-        top: 200px;
-        width: 900px;
-        height: 320px;
-        left:0;
-    }
-    
-    .imgTab {
-        position: absolute;
-        margin-top: 50px;
-        left: 30%;
-        top: -50%;
-    }
-    
-    
-    
-    .imgTab .imgBox {
-        position: relative;
-        width: 554px;
-        height: 334px;
-        
-    }
-    
-    .imgTab .imgBox>div {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 334px;
-        display: none;
-    
-    }
-    
-    .info .imgBox>div.on {
-        display: block;
-    }
-    
-    .info .imgTab .imgBox a {
-    }
-    .info .imgTab .imgBox img {
-    
-    }
-    
-    
-    
-    .info .tabBar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 35px;
-    }   
-    
-    .info .tabBar ul {
-        display: flex;
-    }   
-    
-    .info .tabBar ul li {
-        background-color: #fff;
-        border: #5c82ee 1px solid;
-        border-radius: 30px;
-        padding: 10px 20px;
-        margin-right: 24px; 
-    }  
+    padding: 91px;
+    padding-left: 380px;
 
-    .info_bg h4 {
-        font-size:150px;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        color: #F0F4FF;
-        position: absolute;
-        font-family: 'Roboto', sans-serif;
-        left: 29%;
-        bottom: 70%;
-    }
-    
+}
+
+.infoTxt h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.infoTxt p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.infoTxt .more {
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.infoTxt .more:hover{
+    color: #F89939;
+}
+
+
+
+.infoTxt .more i {
+    padding-left: 8px;
+}
+
+.imgTab_wrap {
+    position: absolute;
+    background-color: #cddbff;
+    top: 200px;
+    width: 900px;
+    height: 320px;
+    left: 0;
+}
+
+.imgTab {
+    position: absolute;
+    margin-top: 50px;
+    left: 30%;
+    top: -50%;
+}
+
+
+
+.imgTab .imgBox {
+    position: relative;
+    width: 554px;
+    height: 334px;
+
+}
+
+.imgTab .imgBox>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 334px;
+    display: none;
+
+}
+
+.info .imgBox>div.on {
+    display: block;
+}
+
+.info .imgTab .imgBox a {}
+
+.info .imgTab .imgBox img {}
+
+
+
+.info .tabBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 29px;
+}
+
+.info .tabBar ul {
+    display: flex;
+}
+
+.info .tabBar ul li {
+    background-color: #fff;
+    border: #5c82ee 2px solid;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5c82ee;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+
+
+.info .tabBar ul li:hover {
+    cursor: pointer;
+    background-color: #5c82ee;
+    color: #fff;
+}
+
+
+.info_bg h4 {
+    font-size: 150px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #F0F4FF;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    left: 30%;
+    bottom: 70.6%;
+    z-index: -99;
+}
 
 
 /* 행사 및 교육 */
-.program{display: flex;
-    justify-content: center;}
-    
-    .box5-3-1 {
-        position: relative;
-        width:30%;
-        height: 450px;
-        background-color: red;
+.box5 {
+    position: relative;
 }
-    
-    .box5-3-1>div{position: absolute;
-        left: 0;
-        top: 0;}
-    
-    .box5-3-2 {position: relative;
-            width: 50%;
-            height: 450px;
-           }
-    
-           .box5-3-2:after {content: "";
-            display: block;
-        clear: both;}
-            .box5-3-2>div {float: left;
-                            width: 33.3333%;} 
-                            
-           .box5-3-2>div img {width: 100%;}
-           .box5-3-2>div:nth-child(2) {transform: scale(1.2);}
 
-
-
-        
-
-
-
-           /* .box5 .box5-1 {
-    margin-top: 20px;
+.box5-1 {
+    padding-bottom: 60px;
 }
 
 
-.box5 .box5-2 {
+.box5-2 {
+    padding-bottom: 40px;
     display: flex;
     justify-content: flex-end;
 }
 
-.box5 .box5-2:after {
+.box5-2 .box5-2-2{
+    padding-left: 10px;
+}
+
+.box5-3 {
+    padding-top: 60px;
+}
+
+
+
+.program {
+    display: flex;
+    justify-content: center;
+}
+
+
+.box5-3-1 {
+    position: relative;
+    width: 32%;
+    height: 450px;
+    /* background-color: red; */
+}
+
+.box5-3-1>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 100px;
+    padding-top: 30px;
+}
+
+.box5-3-1>div h4 {
+    padding-top: 8px;
+    line-height: 1.5;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #2a2a2a;
+}
+
+.box5-3-1>div p {
+    padding-top: 26px;
+    font-size: 16px;
+    font-weight: bolder;    
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+
+.box5-3-1>div .more {
+    color: #555555;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.box5-3-1>div .more:hover {
+    color: #5c82ee;
+
+}
+
+.box5-3-1>div .more i {
+    padding-left: 8px;
+
+}
+
+
+.box5-3-1 .txtBox1 span {
+    border: #F89939 1px solid;
+    background-color: #F89939;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+}
+.box5-3-1 .txtBox2 span {
+    border: #5c82ee 1px solid;
+    background-color: #5c82ee;
+    color: #fff;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 14px;
+}
+
+.box5-3-1 .txtBox3 span {
+    border: #555555 1px solid;
+    background-color: #555555;
+    color: #fff;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 14px;
+}
+
+.box5-3-1>div em {
+    font-style: normal;
+    color: #FF9934;
+}
+
+.box5-3-2 {
+    position: relative;
+    width: 50%;
+    height: 450px;
+}
+
+.box5-3-2:after {
     content: "";
     display: block;
     clear: both;
 }
 
+.box5-3-2>div {
+    float: left;
+    width: 33.3333%;
+}
+
+.box5-3-2>div img {
+    width: 100%;
+}
+
+.box5-3-2>div:nth-child(2) {
+    transform: scale(1.2);
+}
 
 
-
-.box5 .box5-3-2 {
+.box5-3-3  {
     display: flex;
+    font-size: 40px;
+    color: #5c82ee;
+    justify-content: space-between;
+
 }
 
-.box5 .box5-3-2 img {
-    width: 320px;
-    height: 450px;
-}
-
-.box5 .box5-3-2 .poster_01 {
-    position: relative;
-}
-
-.box5 .box5-3-2 .poster_02 {
+.box5-3-3 .e_left {
     position: absolute;
-    
+    top: 60%;
 }
-
-.box5 .box5-3-2 .poster_03 {
+.box5-3-3 .e_right {
     position: absolute;
-} */
+    top: 60%;
+    right: 0;
+}
 
 
 
@@ -473,18 +619,25 @@ body {
     width: 100%;
 }
 
+
+/* //////////////////이미지 앞에 빈 구간은 padidng값으로 떨어트렸는데 맞게 한 건가요?
+그리고 각각 이미지 왼쪽 상단에 날짜를 겹쳐 올려서 표시하고 싶습니다. ////////////////////////////// */
 /* 포토갤러리 */
+
 .photo_wrap {
     background-color: #5c82ee;
     position: relative;
-}
-
-.box6 .box6-2 ul li {
-    position: absolute;
+    height: 704px;
 }
 
 
-.photoTitle  h2{
+
+
+.photoTitle {
+    padding: 50px 0;
+}
+
+.photoTitle h2 {
     color: #fff;
 }
 
@@ -492,23 +645,94 @@ body {
     color: #fff;
 }
 
+
+
 .box6 .box6-2 .trailer ul li img {
     width: 420px;
 }
 
 
+.gallery_img {
+    padding-left: 300px;
+}
+.gallery_img ul {
+    display: flex;
+}
+.gallery_img ul li img{
+    /* position: absolute; */
+}
 
 
+.trailer {
+    position: relative;
+}
+
+.gallery_img ul li .date {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    background-color: #F89939;
+}
+
+
+
+
+
+
+
+
+
+.gallery_arrow {
+    position: absolute;
+    top: 78%;
+    left: 50px;
+}
+
+.gallery_arrow i {
+    padding: 0 10px;
+    margin: 0 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+/* 공지&참여 구간은 육안으로 봤을 때 문제없이 잘 보이는데, 구조가 맞게 코딩되었는지 확인만 부탁드립니다. /////////// */
 /* 공지&참여 */
+
+.box7-2 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.qna_wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 40px;
+}
+
+
 
 .box7-1 {
     margin-bottom: 50px;
+}
+
+.notice {
+    padding-right: 80px;
 }
 
 .notice .listTitle {
     display: flex;
     text-align: center;
     justify-content: center;
+    padding-left: 50px;
+
+}
+
+.notice .listTitle ul li:nth-child(1) {
+    padding: 10px 35px;
 }
 
 .notice .listTitle ul {
@@ -519,38 +743,56 @@ body {
 .notice .listTitle li {
     padding: 10px 20px;
     border: #5c82ee 2px solid;
-    border-radius: 20px;
-    margin-right: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #5c82ee;
+}
+
+.notice .listTitle li:nth-child(1) {
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+.notice .listTitle li:nth-child(2) {
+    margin-left: 10px;
 }
 
 
-.notice .listTitle li .on {
+.notice .listTitle li:hover {
+    background-color: #5c82ee;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+.notice .listTitle .on {
     background-color: #5c82ee;
 }
 
 
-.qna_wrap {
-    display: flex;
-    flex-flow: column nowrap;
-}
 
 
+
+/* 게시글 내용 */
 .notice .listBox {
-    position: relative; 
+    position: relative;
     /* background-color: #F0F4FF; */
     padding: 10px;
     width: 677px;
-    height: 356px;
 }
 
 
 .notice .listBox ul {
     position: absolute;
-    left: 25%;
+    left: 10%;
     top: 56px;
-    display: none;
+    display: none;  
+
+    
 
 }
+
 
 
 .notice .listBox ul.on {
@@ -559,9 +801,83 @@ body {
 
 
 .box7 .notice .listBox ul li {
-    display: block;
-    border-top: #5c82ee;
+    /* display: block; */
+    display: flex;
+    width: 600px;
 }
+
+.notice .listBox ul li:hover {
+    color: #5c82ee;
+}
+
+.box7 .notice .listBox ul li:nth-child(1) {
+    border-top: #5c82ee 2px solid;
+    border-bottom: #555555 1px solid;
+}
+.box7 .notice .listBox ul li:nth-child(n+2):nth-child(-n+3) {
+    border-bottom: #555555 1px solid;
+}
+.box7 .notice .listBox ul li:nth-child(4) {
+    border-bottom: #5c82ee 2px solid;
+}
+
+
+.box7 .notice .listBox ul li div {
+    display: flex;
+    align-items: center;
+}
+
+.box7 .notice .listBox .on li div {
+    margin-left: 30px;
+}
+
+.box7 .notice .listBox .qna div {
+    padding-right: 30px;
+}
+
+.box7 .notice .listBox .on li {
+    padding: 17.5px;
+}
+
+.box7 .notice .listBox .qna li {
+    padding: 29.5px;
+} 
+
+.box7 .notice .listBox ul li div img {
+    display: none;
+}
+
+.box7 .notice .listBox ul li:hover img {
+    display: block;
+}
+
+
+.listBox ul li em {
+    color: #5c82ee;
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.listBox .on em {
+    font-style: normal;
+    padding-left: 12px;
+}
+
+.listBox .qna em {
+    font-style: normal;
+    padding-right: 10px;
+} 
+
+.listBox ul li {
+    font-size: 16px;
+}
+
+.listBox li span {
+    padding-left: 20px;
+    color: #555555;
+}
+
+
 
 
 /* 팝업이미지 */
@@ -570,6 +886,7 @@ body {
     width: 470px;
     height: 280px;
 }
+
 .popup_img {
     background-image: url(../img/popup_img.png);
     width: 470px;
@@ -578,27 +895,68 @@ body {
 
 /* 문의하기 */
 .box7 .box7-2-3 {
-    background-color: #F89939;
+    background-color: #FF9934;
     width: 470px;
     margin-top: 10px;
     padding: 18px 20px 18px 30px;
     color: #fff;
 }
 
+
+
+
 .box7-2-3 .qnaTxt p {
-    border: #fff 1px solid;
+    border: #fff 2px solid;
     display: inline-block;
     border-radius: 20px;
-    padding: 8px 22px;  
+    padding: 8px 22px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.box7-2-3 .qnaTxt p:hover {
+    background-color: #fff;
+    color:#FF9934
+}
+.box7-2-3 h3 {
+    font-size: 20px;
+}
+
+
+
+.box7-2-3 .qnaTxt ul {
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .box7-2-3 .qnaTxt li {
-    padding: 10px 0
+    padding: 8px 0;
+    font-size: 16px;
 }
+
 .box7-2-3 .qnaTxt ul li em {
     padding-left: 6px;
     padding-right: 10px;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
 }
+
+.qna_wrap .line {
+    display: flex;
+}
+
+.qna_wrap .line:after {
+    content: "";
+    flex-grow: 1;
+    margin: 0px 16px;
+    background: #fff;
+    height: 1.5px;
+    margin-top: 13px;
+}
+
+
 
 /* 오시는길 */
 .box8 .box8-3 h3 {
@@ -607,40 +965,54 @@ body {
     text-align: center;
 }
 
+.box8 .box8-3 {
+    padding-top: 20px;
+}
+
 .box8 .box8-3 p {
-    color:#555555;
+    color: #555555;
     font-size: 14px;
     text-align: center;
 }
 
-
-
 .box8-4 {
     display: flex;
-    width: 942px;
-    height: 370px;
-    margin: 0 auto;
+    width: 1280px;
+    height: 300px;
+    /* background-color: #F89939; */
+    margin: auto;
+    color: #262626;
 }
 
-.box8-4 div {
+
+.box8-4 li {
     flex: 1;
+    background-color: #F0F4FF;
+    margin-top: 30px;
+    height: 300px;
+}
+
+.box8-4 li {
+    margin-right: 20px;
     text-align: center;
-    background-color: #FCFCFC;
 }
 
-.box8-4 span {
-    border: 1;
+.box8-4 li img {
+    width: 100px;
+    padding-top: 10px;
 }
 
-
-
-
-.box8-4-2 {
-    border-left:#D9D9D9 1px solid;
+.box8-4 .mapTxt_name {
+    font-size: 18px;
+    font-weight: bolder;
+    padding-bottom: 30px;
 }
-.box8-4-3 {
-    border-left:#D9D9D9 1px solid;
+
+.box8-4 .mapTxt2 p {
+    font-size: 16px;
+    padding: 10px 0px;
 }
+
 
 
 
@@ -653,7 +1025,7 @@ body {
     background-color: #3F398C;
     color: #fff;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -680,7 +1052,7 @@ body {
     padding: 18px;
 }
 
-.boxC p{
+.boxC p {
     padding-bottom: 10px;
 }
 
@@ -693,7 +1065,7 @@ body {
     padding-left: 10px;
 }
 
-.boxC-2 p {
+.boxC-2 .linkSite {
     padding-left: 10px;
 }
 
@@ -705,9 +1077,15 @@ body {
 
 
 /* 박스 위아래 간격 */
-.box4, .box6, .box8 {
+.box4,
+.box6 {
     margin-top: 90px;
-    margin-bottom: 90px;
+    margin-bottom: 200px;
+}
+
+.box7, .box8 {
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 
@@ -722,29 +1100,24 @@ body {
 
 /* 미디어쿼리구간설정///////////////// */
 /* 768px 이상구간설정//////////////// */
-@media(min-width:768px) {
+@media(min-width:768px) {}
 
-}
-    /* 레이아웃설정 */
+/* 레이아웃설정 */
 
 
-    /* 박스2-3-1과박스2-3-2  (상세설명,포스터이미지) 가로정렬*/
-    .program {
-        display: flex;
-        justify-content: space-between;
-    }
+/* 박스2-3-1과박스2-3-2  (상세설명,포스터이미지) 가로정렬*/
 
-    /* 공지 참여 가로정렬 */
+/* 공지 참여 가로정렬 */
 .notice {
-    width: 50%;
-    float: left;
+/* display: flex; */
 }
 
 /* 1040px이상일 때 /////////////////////////2// */
 @media (min-width:1040px) {
 
-        
-        .box5, .box7 {
+
+    .box5,
+    .box7 {
         width: 1500px;
         margin: 0 auto;
     }
