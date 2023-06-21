@@ -279,13 +279,13 @@ footer {
 
 #h_wrap .hero .hero_contents .img {
     position: relative;
-    background-image: url(../img/hero01.png);
+    background-image: url(../img/hero_01.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     width: 50%; 
-    height: 600px;
-    
+    height: 630px;
+    /* background-color: #bfff0f; */
     transition: all 1.2s ease;
     transform: translateX(500px);
     opacity: 0;
