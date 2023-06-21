@@ -32,26 +32,38 @@ $(document).ready(function () {
         // $('h1').text(sc)
 
         //story영역 - 이미지와 텍스트가 서서히 나타나게 설정
-        let htop = $('#wrap .text_slide_wrap').offset().top;
-        if(sc>=htop-200) {
+        let aa = $('#wrap .text_slide_wrap').offset().top;
+        if(sc>=aa-200) {
             $('.story').addClass('on')
+        }
+        if(sc<aa-200){
+            $('.story').removeClass('on')
         }
 
         //history 영역 - 오른쪽 이미지와 텍스트영역이 우측에서 날아옴
-        if (sc >= 1600) {
+        let bb = $('#wrap .history').offset().top;
+        if (sc >= bb-200) {
             $('.history .right').addClass('on')
+        }
+        if (sc < bb-200) {
+            $('.history .right').removeClass('on')
         }
 
         // vision 영역 - 2개의 원이 순차적으로 아래에서 위로 나타나게 설정
-        if (sc >= 3333) {
+        let cc = $('#wrap .vision').offset().top;
+        if (sc >= cc-200) {
             $('.vision_contents').addClass('on')
+        }
+        if (sc < cc-200) {
+            $('.vision_contents').removeClass('on')
         }
 
     });
 
 
-    // 메뉴 슬라이드
+    // 메뉴영역에서 양쪽 화살표를 클릭했을 때, 이미지 슬라이드 이동
     let a = 0
+    // 오른쪽 화살표를 클릭했을 때
     $('.menu .arrow .right').click(function () {
         if (a < 4)
             a++;
@@ -60,6 +72,7 @@ $(document).ready(function () {
         $('.menu article .imgList ul').css({ 'left': (-200) * a })
     })
 
+    // 왼쪽 화살표를 클릭했을 때
     $('.menu .arrow .left').click(function () {
         if (a > 0)
             a--;
@@ -86,11 +99,23 @@ $(document).ready(function () {
 
 
     // 서브페이지
-    //수량을 선택하면 숫자가 늘어나거나 줄어들게 설정
+    // 수량부분에서 마이너스와 플러스를 클릭했을 때, 숫자가 늘어나거나 줄어들게 설정
+    // 장바구니버튼을 눌렀을 때, 상단 오른쪽 카트 아이콘의 숫자가 변경
+    let i = 1;
+    $('.product .p_wrap .btn_wrap .cartBtn').click(function(){
+        $('#h_wrap header .nav_wrap .h_r_btn ul>li>p').text(i+1)
+    })
     
+    $('.product .p_wrap .p_buy .num ul li').eq(2).click(function(){
+        $('.product .p_wrap .p_buy .num ul li').eq(1).text(i++)
+    })
 
+    $('.product .p_wrap .p_buy .num ul li').eq(0).click(function(){
+        $('.product .p_wrap .p_buy .num ul li').eq(1).text(i--)
+    })
 
+    $('.product .p_wrap .btn_wrap .cartBtn').click(function(){
+        $('#h_wrap header .nav_wrap .h_r_btn ul>li>p').text(i-1)
+    })
 
-
-    
 });//자바스크립트 끝
