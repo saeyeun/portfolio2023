@@ -14,7 +14,6 @@ $(document).ready(function () {
         }, 100);
     }
 
-
     // hero영역 - 텍스트와 이미지가 양쪽 끝에서 중앙으로 순차적으로 모이게 설정    
     setTimeout(function () {
         $('#h_wrap .hero .hero_contents .title').addClass('on')
@@ -30,6 +29,13 @@ $(document).ready(function () {
 
         let sc = $(this).scrollTop();
         // $('h1').text(sc)
+
+        // 헤더의 nav부분이 스크롤을 내리면 색깔이 바뀌게 설정
+        if(sc>=50) {
+            $('#h_wrap header').addClass('active')
+        } else {
+            $('#h_wrap header').removeClass('active')
+        }
 
         //story영역 - 이미지와 텍스트가 서서히 나타나게 설정
         let aa = $('#wrap .text_slide_wrap').offset().top;
