@@ -123,6 +123,7 @@ footer {
     height: 80px;
     display: flex;
     justify-content: space-between;
+    flex-flow: row nowrap;
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
@@ -145,6 +146,7 @@ footer {
 
 #h_wrap header .nav_wrap nav ul {
     display: flex;
+
 }
 
 #h_wrap header .nav_wrap nav ul li {
@@ -690,15 +692,9 @@ footer {
     width: 100%;
     max-width: 740px;
     /* background-color: aqua; */
-    transition: all 1.2s ease;
-    opacity: 0;
     
 }
 
-/* history on값 설정 */
-.history .history_contents .right.on {
-    opacity: 1;
-}
 
 .history .history_contents .right .img {
     width: 300px;
