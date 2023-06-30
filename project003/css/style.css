@@ -1,0 +1,79 @@
+@charset 'UTF-8';
+
+/* 전체설정 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {
+    
+}
+
+/* main 배경설정 */
+.main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main .main_bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/main_bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+}
+
+.main .main_contents {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+}
+
+/* 크기 및 위치 고정 위해 vh,vw값 사용 */
+.main .main_contents .figure {
+    width: 36vw;
+    height: 70vh;
+    background-color: #000;
+    border-radius: 500px 500px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -18vw;
+
+}
+
+.main .main_contents h1 {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    margin-left: -25vw;
+    font-size: 200px;
+    letter-spacing: 150px;
+    color: red;
+} 
+
