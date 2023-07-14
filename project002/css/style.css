@@ -35,7 +35,7 @@ ol {
 
 a {
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
 }
 
 img {
@@ -136,10 +136,14 @@ footer {
 
 /* 로고설정 */
 #h_wrap header .nav_wrap h1 {
+}
+
+#h_wrap header .nav_wrap h1 a {
     color: #D23137;
     font-family: 'Pacifico', cursive;
     font-size: 36px;
 }
+
 
 /* 네비설정 */
 #h_wrap header .nav_wrap nav {}
@@ -514,6 +518,7 @@ footer {
     text-align: center;
     padding-top: 40px;
 }
+
 /* story on값 설정 */
 #wrap .story.on article .story_contents .img {
     opacity: 1;

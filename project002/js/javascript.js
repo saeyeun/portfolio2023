@@ -1,12 +1,6 @@
 $(document).ready(function () {
 
 
-    // 스크롤값
-    // let ht = $(window).height(),
-    //     hht = $('header').height(),
-    //     fht = $('footer').height();
-
-
     // 새로고침했을 때, 스크롤 맨위로 이동
     window.onload = function () {
         setTimeout(function () {
@@ -65,7 +59,6 @@ $(document).ready(function () {
         if (a < 4)
             a++;
 
-        // let ulWd = $('.menu>.lmgList ul').width()
         $('.menu article .imgList ul').css({ 'left': (-200) * a })
     })
 
@@ -74,7 +67,6 @@ $(document).ready(function () {
         if (a > 0)
             a--;
 
-        // let ulWd = $('.menu>.lmgList ul').width()
         $('.menu article .imgList ul').css({ 'left': (-200) * a })
     })
 

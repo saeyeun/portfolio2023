@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>철도박물관</title>
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="css/ex01.css">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 외부스크립트 연결 -->
+    <script src="js/javascript.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- 상단메뉴 -->
+        <div class="header_top">
+            <div class="language">
+                <form>
+                    <select name="language">
+                        <option value="korean">한국어</option>
+                        <option value="english">영어</option>
+                        <option value="chinese">중국어</option>
+                        <option value="japanese">일본어</option>
+                    </select>
+                </form>
+            </div>
+            <div class="h_top_right">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">예약확인</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- 하단메뉴 -->
+        <div class="header_bottom">
+            <h1>
+                <a href="#">로고</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">전시안내</a></li>
+                    <li><a href="#">행사·교육</a></li>
+                    <li><a href="#">참여마당</a></li>
+                    <li><a href="#">박물관소개</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <a href="#"><i class="fa fa-search" aria-hidden="true"></i>검색</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="wrap">
+        <!-- hero영역 -->
+        <section class="hero">
+            <div class="hero_slide">
+                <ul>
+                    <li>
+                        <div class="slogan">
+                            <h3>철도박물관과 함께하는<br>
+                                철도 역사 여행</h3>
+                            <p>철도역사가 살아 숨쉬고 있는 철도문화의 전당으로 떠나보세요</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slogan">
+                            <h3>철도박물관과 함께하는<br>
+                                철도 역사 여행</h3>
+                            <p>철도역사가 살아 숨쉬고 있는 철도문화의 전당으로 떠나보세요</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slogan">
+                            <h3>철도박물관과 함께하는<br>
+                                철도 역사 여행</h3>
+                            <p>철도역사가 살아 숨쉬고 있는 철도문화의 전당으로 떠나보세요</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn">
+                <ul>
+                    <li class="on"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <!-- 관람시간 및 휴관 안내 -->
+            <div class="reser_wrap">
+                <div class="reserBox">
+                    <ul class="reserTxt">
+                        <li>
+                            <p><img src="img/clock.png" alt="">
+                                관람시간 <span>9:00 ~ 18:00</span></p>
+                        </li>
+                        <li>
+                            <p><img src="img/calender.png" alt="">
+                                휴관일 <span>매주 월요일</span></p>
+                        </li>
+                    </ul>
+                    <div class="reserBtn">
+                        <ul>
+                            <li>예약하기</li>
+                            <li>관람안내</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- info영역 -->
+        <section class="info">
+            <div class="info_wrap">
+                <div class="title">
+                    <h2>시설안내</h2>
+                    <p>철도박물관의 주요 시설을 소개합니다.</p>
+                </div>
+                <div class="info_contents">
+
+
+                    <div class="leftBox">
+                        <div class="box_bg">
+                            <h3 class="bg_txt">Railroad</h3>
+                            <div class="imgList">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightBox">
+                        <h3>철도박물관은?</h3>
+                        <p>1988년 1월 26일 개관한 현재의 철도박물관은 겨레와 고락을 함께 해온 철도 역사가 살아 숨쉬고 있는 철도 문화의 전당으로, 1만여점의 소장품과 각종 자료들이
+                            실내전시관과 야외전시장에서 여러분을 기다리고 있습니다.</p>
+                        <a href="#" class="moreBtn">
+                            자세히 보기
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <div class="thumb">
+                            <ul>
+                                <li class="on"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img"><img src="img/trainline.png" alt=""></div>
+
+        </section>
+
+
+
+
+        <!-- program 행사 영역 -->
+        <section class="festival program">
+            <div id="wrap">
+                <div class="fesBox">
+                    <div class="title">
+                        <h2>행사 및 교육</h2>
+                        <p>유익한 행사 및 교육 프로그램을 체험해 보세요.</p>
+                        <div class="btn">
+                            <p class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+                            <p class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                        </div>
+                    </div>
+                    <div class="imgList">
+                        <ul>
+                            <li><img src="img/poster_01.png" alt=""></li>
+                            <li><img src="img/poster_02.png" alt=""></li>
+                            <li><img src="img/poster_03.png" alt=""></li>
+                            <li><img src="img/poster_01.png" alt=""></li>
+                            <li><img src="img/poster_02.png" alt=""></li>
+                            <li><img src="img/poster_03.png" alt=""></li>
+                            <li><img src="img/poster_01.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+        
+        
+                <p class="more"><img src="img/icon/more_10.png" alt=""></p>
+            </div>
+        </section>
+        <!-- <section class="program">
+
+            <div class="title">
+                <h2>행사 및 교육</h2>
+                <p>유익한 행사 및 교육 프로그램을 체험해 보세요.</p>
+
+                <a href="#" class="moreBtn">
+                    자세히 보기
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+
+            <div class="imgSlide">
+
+                <div class="btn">
+                    <span class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                    <span class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+
+                <div class="imgList_wrap">
+                    <ul class="imgList">
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_01.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>2023 한국철도<br>
+                                    어린이 힐링 프로그램</h3>
+                                <div class="date">
+                                    <p>2023.05.05 ~ 2023.05.07</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_02.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>제 10회<br>
+                                    철도박물관 기념행사</h3>
+                                <div class="date">
+                                    <p>2023.04.08 ~ 2023.04.22</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_03.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>우리가 그려요,<br>
+                                    의왕철도박물관</h3>
+                                <div class="date">
+                                    <p>2023.03.10 ~ 2023.03.31</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_01.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>2023 한국철도<br>
+                                    어린이 힐링 프로그램</h3>
+                                <div class="date">
+                                    <p>2023.05.05 ~ 2023.05.07</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_02.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>제 10회<br>
+                                    철도박물관 기념행사</h3>
+                                <div class="date">
+                                    <p>2023.04.08 ~ 2023.04.22</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_03.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>우리가 그려요,<br>
+                                    의왕철도박물관</h3>
+                                <div class="date">
+                                    <p>2023.03.10 ~ 2023.03.31</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_01.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>2023 한국철도<br>
+                                    어린이 힐링 프로그램</h3>
+                                <div class="date">
+                                    <p>2023.05.05 ~ 2023.05.07</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="img/poster_02.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h3>제 10회<br>
+                                    철도박물관 기념행사</h3>
+                                <div class="date">
+                                    <p>2023.04.08 ~ 2023.04.22</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- 공지 및 참여 ----------->
+        <section class="notice">
+            <div class="title">
+                <h2>공지·참여</h2>
+                <p>철도박물관의 다양한 소식을 전합니다.</p>
+            </div>
+            <div class="notice_wrap">
+                <div class="tabBar">
+                    <div class="tabBtn">
+                        <div class="btnList">
+                            <p class="on">공지사항</p>
+                            <p class="">자주하는 질문</p>
+                        </div>
+                        <!-- <a href="#" class="moreBtn">
+                        더보기
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a> -->
+                    </div>
+                    <ul class="tab01 on">
+                        <li>
+                            <a href="#">
+                                <span><em>25</em><br>2023.04</span>
+                                <div>철도박물관의 상설 체험활동 5가지를 소개합니다.</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><em>18</em><br>2023.04</span>
+                                <div>SNS 인증 이벤트 참여 관련 안내</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><em>03</em><br>2023.04</span>
+                                <div>파시5-23호 증기기관차 복원 공사 시행을 알려드립니다</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><em>20</em><br>2023.03</span>
+                                <div>'한국철도 어린이 기차그리기 대회 수상작 전시회' 개최</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="tab02">
+                        <li><a href="#">
+                                <div><em>Q.</em>박물관 해설은 어디서 예약할 수 있나요?</div>
+                                <p>2023.04.25</p>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <div><em>Q.</em>박물관에서 간행한 도서나 자료를 구입할 수 있나요?</div>
+                                <p>2023.04.18</p>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <div><em>Q.</em>전시실 내에서 사진촬영이 가능한가요?</div>
+                                <p>2023.04.03</p>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <div><em>Q.</em>박물관 내에서 지켜야할 사항은 무엇인가요?</div>
+                                <p>2023.03.20</p>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup">
+                    <div class="popup_img"></div>
+                </div>
+                <div class="tel">
+                    <p>문의하기</p>
+                    <p><i class="fa fa-phone fa-flip-horizontal" aria-hidden="true"></i><span>문의전화</span>031-461-3610</p>
+                    <p><i class="fa fa-comments" aria-hidden="true"></i><span>1:1 답변</span>24시간 이내 답변가능</p>
+                    <p class="btn">묻고답하기</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="review">
+            <div class="title">
+                <h2>포토리뷰</h2>
+                <p>철도박물관에서 소중한 추억을 담아보세요.</p>
+                <a href="#" class="moreBtn">
+                    자세히 보기
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="imgList">
+                <ul>
+                    <li><a href="#">
+                            <div class="img">
+                                <div class="txt">
+                                    <p>야외전시장에서 한 컷</p>
+                                    <p>2023.04.25</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="img">
+                                <div class="txt">
+                                    <p>멀리서 본 의왕철도박물관의 모습</p>
+                                    <p>2023.04.23</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="img">
+                                <div class="txt">
+                                    <p>정말 유익한 시간이었어요!</p>
+                                    <p>2023.04.18</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="img">
+                                <div class="txt">
+                                    <p>옹기종기 모여서 구경해요</p>
+                                    <p>2023.04.02</p>
+                                </div>
+                            </div>
+                        </a></li>
+                </ul>
+        </section>
+
+        <section class="location">
+            <div class="title">
+                <h2>오시는길</h2>
+                <p>철도박물관의 위치를 안내합니다.</p>
+            </div>
+            <div class="location_wrap">
+                <div class="map"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.198605651547!2d126.94871617579372!3d37.314122972105174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5d448395b8fd%3A0xca5bd0c7fb1acd7a!2z7LKg64-E67CV66y86rSA!5e0!3m2!1sko!2skr!4v1688903600276!5m2!1sko!2skr"
+                        width="2000" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map_txt"></div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="left">
+            <div class="logo">logo</div>
+            <div class="adress">
+                <p>주소 경기도 의왕시 철도박물관로 142</p>
+                <p>전화번호 031-461-3610</p>
+                <p>팩스 031-460-4322</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="sns">
+                <ul>
+                    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+            <div class="linkSite">
+                <select name="option" id="">
+                    <option value="all" selected>관련사이트바로가기</option>
+                    <option value="events">코레일홈페이지</option>
+                    <option value="education">키즈코레일</option>
+                    <option value="education">승차권예매</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <!-- quick메뉴 -->
+    <!-- <nav class="quickMenu">
+    <ul>
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+    </ul>
+  </nav> -->
+</body>
+
+</html>

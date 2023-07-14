@@ -1,0 +1,260 @@
+@charset 'UTF-8';
+/* profile 이름 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* 텍스트 영문 폰트 1 */
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+/* 텍스트 영문 폰트 2 */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* 한글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* 전체설정 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+
+body {
+    width: 100%;
+    height: 2600px;
+    background: linear-gradient(180deg, #2a2a2a, #6d0000);
+}
+
+
+#sub .menu {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    top: 0;
+    /* display: none; */
+    border-bottom: 1px solid #d8d8d8;
+}
+
+
+#sub .menu nav {
+    width: 100%;
+    height: 80px;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+#sub .menu nav h1 {
+    color: #fff;
+}
+
+#sub .menu nav ul {
+    display: flex;
+}
+
+#sub .menu nav ul li {}
+
+#sub .menu nav ul li a {
+    color: #fff;
+    padding: 2px 10px;
+    /* background-color: bisque; */
+    margin-left: 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#sub .menu nav ul li a:hover {
+    cursor: pointer;
+    color: #df0000;
+}
+
+#sub .menu nav ul li.on a {
+    color: #df0000;
+}
+
+
+
+.profile {
+    position: fixed;
+    background-color: aqua;
+    /* margin-top: 150px; */
+    top: 50%;
+    /* margin-top: -250px; */
+}
+
+.profile ul {
+    width: 100%;
+    position: relative;
+}
+
+.profile ul>li {
+    width: 180px;
+    height: 600px;
+    margin: 10px;
+    /* background-color: #fff; */
+    float: left;
+    /* box-shadow: 5px 5px 5px #000; */
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* 이미지 요소 설정 */
+
+.profile li:hover{}
+.profile .img1 {
+    width: 500px;
+    height: 600px;
+    /* background-color: #555; */
+    position: absolute;
+    top: 50%;
+    left: 100px;
+}
+
+.profile .img2 {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    margin-top: 200px;
+    left: 14%;
+}
+
+.profile .img3 {
+    width: 300px;
+    height: 800px;
+    position: absolute;
+    left: 17%;
+    z-index: 1;
+}
+
+.profile .img4 {
+    width: 300px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 21%;
+    transform: rotate(16deg);
+}
+
+.profile .img5 {
+    width: 300px;
+    height: 800px;
+    position: absolute;
+    margin-top: 50px;
+    left: 34%;
+    z-index: 1;
+}
+
+.profile .img6 {
+    width: 244px;
+    height: 400px;
+    position: absolute;
+    left: 38%;
+}
+
+.profile .img7 {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    /* margin-top: 34vh; */
+    left: 38%;
+    margin-top: 350px;
+}
+
+.profile .img8 {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    margin-top: 120px;
+    left: 48%;
+}
+
+.profile ul>li img {
+    width: 100%;
+    height: auto;
+}
+
+/* 텍스트 요소 설정 */
+.profile .txt1 {
+    width: 400px;
+    height: auto;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 11%;
+    line-height: 46px;
+    /* transform: rotate(8deg); */
+}
+
+.profile .txt1 h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #C2B384;
+    letter-spacing: 5px;
+
+}
+.profile .txt1 h2 span {
+    font-size: 18px;
+    color: #eeeeee;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.profile .txt2 {
+    width: 600px;
+    height: auto;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 27%;
+    margin-top: 450px;
+    line-height: 38px;
+    letter-spacing: 5px;
+    transform: rotate(-10deg);
+    
+}
+
+.profile .txt2 h3 {
+    font-size: 30px;
+    color: #d8d8d8;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.profile .txt3 {
+    width: 800px;
+    height: auto;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 44%;
+    /* margin-top: 400px; */
+    /* transform: rotate(-10deg); */
+    margin-top: 120px;
+}
+
+.profile .txt3 h4 {
+    line-height: 28px;
+    font-family: 'Meie Script', cursive;
+    color: #cfcfcf;
+    letter-spacing: 2px;
+}
+
+

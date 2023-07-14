@@ -1,8 +1,9 @@
 @charset 'UTF-8';
 /* main 왼쪽 텍스트 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
-/* profile 이름 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+/* main_menu 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* 전체설정 */
 * {
@@ -18,6 +19,7 @@ ol {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 img {
@@ -26,11 +28,25 @@ img {
 
 
 
+
+/* Main영역 시작 ------------------------*/
 #main {
-    /* width: 100%;
-    height: 100vh; */
+    width: 100%;
+    height: 100vh;
     position: relative;
     overflow: hidden;
+}
+
+#main .bg_img {
+    position: absolute;
+    right: 12%;
+    top: -26%;
+    transform: rotate(10deg);
+    width: 360px;
+    height: auto;
+    opacity: 0.8;
+    filter: grayscale(34%);
+    z-index: -999;
 }
 
 /* 메인 메뉴설정 */
@@ -44,6 +60,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 #main .main_menu nav {
@@ -51,19 +68,50 @@ img {
     display: flex;
 }
 
-#main .main_menu ul {
+#main .main_menu nav ul {
     display: flex;
 }
 
-#main .main_menu ul li {
+#main .main_menu nav ul li {
     /* background-color: antiquewhite; */
-    margin: 0 40px;
-    padding: 2px 10px;
-    font-size: 20px;
+    position: relative;
+
 }
 
-#main .main_menu ul li:hover {
+#main .main_menu nav ul li a {
+    margin: 0 40px;
+    padding: 2px 10px;
+    font-size: 34px;
+    color: #2a2a2a;
+    font-family: 'Lobster', cursive;
+    transition: all 0.5s;
+}
+
+#main .main_menu nav ul li a:hover {
     cursor: pointer;
+    color: #fff;
+}
+
+
+#main .main_menu nav ul li span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background-color: #AB0A0A;
+    z-index: -1;
+    margin-left: -8px;
+    transition: all 0.6s;
+    transform: skewX(0deg);
+    opacity: 0.4;
+    
+}
+
+#main .main_menu nav ul li:hover span {
+    width: 100%;
+    transform: skewX(-20deg);
+    opacity: 0.8;
 }
 
 
@@ -99,6 +147,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    filter: grayscale(30%);
 }
 
 #main .main_contents p:nth-child(1) span {
@@ -161,6 +210,18 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    animation: ani1 1.5s linear infinite alternate;
+    margin-top: 0;
+}
+
+@keyframes ani1 {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 8%;
+    }
 }
 
 #main .main_contents .img {
@@ -175,21 +236,11 @@ img {
     background-position: center center;
 }
 
-#main .bg_img {
-    position: absolute;
-    right: 12%;
-    top: -26%;
-    transform: rotate(10deg);
-    width: 360px;
-    height: auto;
-    opacity: 0.8;
-    filter: grayscale(34%);
-    z-index: -999;
-}
 
-/* 메뉴 전체 설정 ---------*/
-section .menu {
-    position: sticky;
+
+/*서브페이지 메뉴 전체 설정 ------------------------*/
+#sub .menu {
+    position: fixed;
     width: 100%;
     height: 80px;
     /* background-color: salmon; */
@@ -198,10 +249,12 @@ section .menu {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     top: 0;
+    /* display: none; */
+    border-bottom: 1px solid #d8d8d8;
 }
 
 
-section .menu nav {
+#sub .menu nav {
     width: 100%;
     height: 80px;
     max-width: 1600px;
@@ -212,199 +265,766 @@ section .menu nav {
     /* background-color: aqua; */
 }
 
-section .menu nav h1 {
+#sub .menu nav h1 {
     color: #fff;
 }
 
-section .menu nav ul {
+#sub .menu nav ul {
     display: flex;
 }
 
-section .menu nav ul li {
+#sub .menu nav ul li {}
+
+#sub .menu nav ul li a {
     color: #fff;
     padding: 2px 10px;
     /* background-color: bisque; */
-    margin-left: 5px;
+    margin-left: 16px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-section .menu nav ul li:hover {
+#sub .menu nav ul li a:hover {
+    cursor: pointer;
+    color: #df0000;
+}
+
+#sub .menu nav ul li.on a {
+    color: #df0000;
+}
+
+/* Profile 영역 ------------------------*/
+/* 별도의 profile.css 파일로 설정 */
+
+
+
+
+/* Brand 영역 ------------------------*/
+/* play(영상) */
+.play {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+.play {
+    width: 90%;
+    height: 100vh;
+}
+
+/* brand 소개*/
+
+.brand {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, #000, #6d0000);
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+/* btn을 클릭했을 때,
+brand영역이 왼쪽으로 이동할 값 */
+/* pointer-events:none = 포인터 이벤트(클릭, 드래그, 호버 등)를 비활성화 */
+.brand.on {
+    left: calc(-100% + 200px);
+    background-color: #00000000;
+    pointer-events: none;
+}
+
+.brand.on .circle_wrap {
+    display: none;
+}
+
+.brand_contents {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+}
+
+.brand .btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-top: -42px;
+    margin-right: -30px;
+    padding-right: 60px;
     cursor: pointer;
 }
 
+/* btn 포인터 이벤트 활성화 */
+.brand.on .btn {
+    pointer-events: all;
+}
 
-/* profile 영역---------------------------------------- */
-.profile {
-    background-color: #000;
+
+/* 마우스 오버시 왼쪽으로 화면이 이동 */
+/* btn에 오버했을 때, btn의 부모요소인 brand 선택 */
+.brand:has(.btn:hover) {
+    left: -30px;
+}
+
+/* has() 선택자는 하위 선택자와 일치하는 하나 이상의 자손을 포함하는 모든 요소와 일치한다. */
+/* play화면에서 마우스 오버시 brand영역이 보이는 값
+왼쪽 -100%로 숨겨진 상태에서 마우스 오버시 나머지 px값만큼 보이도록 설정   */
+.brand.on:has(.btn:hover) {
+    left: calc(-100% + 140px);
+}
+
+/* 배경 이미지 설정 */
+.brand .top_bg {
     width: 100%;
-    height: 100vh;
+    height: 100px;
+}
+
+.brand .brand_bg {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
     position: relative;
 }
 
-.profile_contents {
+.brand .brand_bg img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -200px;
+}
+
+.brand .circle_wrap {
+    width: 100%;
+    /* background-color: #999; */
+}
+
+
+
+
+/* tab버튼 설정 */
+.brand .brand_contents .tab {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* background-color: #999; */
+}
+
+.brand .brand_contents .tab ul {
+    display: flex;
+}
+
+.brand .brand_contents .tab ul li {
+    color: #fff;
+    padding: 2px 10px;
+    margin-left: 10px;
+    /* background-color: #6d0000; */
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 26px;
+}
+
+.brand .brand_contents .tab ul li span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3%;
+    height: 100%;
+    background-color: #ff552b;
+    z-index: -1;
+    margin-left: -8px;
+    transition: all 0.6s;
+    transform: skewX(0deg);
+    opacity: 0.8;
+}
+
+.brand .brand_contents .tab ul li:hover span {
+    width: 100%;
+    transform: skewX(-20deg);
+    opacity: 0.4;
+}
+
+.brand .brand_contents .tab ul li.on span {
+    width: 100%;
+}
+
+/* 원 설정 */
+.brand .circle_wrap {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    /* margin-top: 100px; */
+}
+
+.brand .circle {
+    width: 1800px;
+    height: 1800px;
+    position: absolute;
+    border-radius: 100%;
+    border: 300px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    left: 50%;
+    margin-left: -900px;
+    top: 50%;
+    /* margin-top: -00px; */
+    transition: all 1.2s;
+
+}
+
+
+
+.brand .circle .imgList {}
+
+.brand .brand_contents .circle .imgList li {
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.brand .brand_contents .circle .imgList li:hover {
+    scale: 1.1;
+}
+
+.brand .brand_contents .circle .imgList li .img {
+    width: 400px;
+    height: 500px;
+}
+
+/* 이미지 배치 */
+.brand .brand_contents .circle .imgList li:nth-child(1) {
+    /* background-color: salmon; */
+    top: 0;
+    left: 50%;
+    margin-top: -450px;
+    margin-left: -200px;
+    transform: rotate(0deg);
+    background-image: url(../img/brand01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.brand .brand_contents .circle .imgList li:nth-child(2) {
+    /* background-color: sandybrown; */
+    top: 50%;
+    left: 0;
+    margin-top: -200px;
+    margin-left: -400px;
+    transform: rotate(-90deg);
+    background-image: url(../img/brand02.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.brand .brand_contents .circle .imgList li:nth-child(3) {
+    /* background-color: skyblue; */
+    top: 100%;
+    left: 50%;
+    /* margin-top: -100px; */
+    margin-left: -200px;
+    transform: rotate(-180deg);
+    background-image: url(../img/brand03.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.brand .brand_contents .circle .imgList li:nth-child(4) {
+    /* background-color: seagreen; */
+    top: 50%;
+    left: 100%;
+    margin-top: -200px;
+    /* margin-left: -100px; */
+    transform: rotate(-270deg);
+    background-image: url(../img/brand04.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* 오른쪽 btn설정 */
+.brand .btn {
+    width: 200px;
+    height: 80px;
+    /* background-color: aqua; */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-right: -30px;
+    padding-right: 80px;
+    cursor: pointer;
+    letter-spacing: 8px;
+
+}
+
+.brand .btn i {
+    font-size: 60px;
+    position: absolute;
+    right: 60%;
+}
+
+.brand .btn i:nth-child(1) {
+    animation: ani 1.5s 0s linear infinite;
+}
+
+.brand .btn i:nth-child(2) {
+    animation: ani 1.5s 0.5s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        right: 50px;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        right: 150px;
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Gallery 영역 시작 ------------------------*/
+
+.gallery {
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: #000;
+}
+
+.gallery .gallery_contents {
+    width: 100%;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    overflow: hidden;
+}
+
+/* 왼쪽 탭바 */
+.gallery .gallery_contents .tab {
+    width: 10%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    display: block;
+}
+
+.gallery .gallery_contents .tab ul {
+    position: absolute;
+    width: 100%;
+    top: 36%;
+    /* background-color: antiquewhite; */
+}
+
+.gallery .gallery_contents .tab ul li {
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    margin-top: 30px;
+    z-index: 1;
+    letter-spacing: 3px;
+}
+
+.gallery .gallery_contents .tab ul li span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3%;
+    height: 100%;
+    background-color: #A00D0D;
+    z-index: -1;
+    margin-left: -8px;
+    transition: all 0.6s;
+    transform: skewX(0deg);
+    opacity: 0.8;
+}
+
+.gallery .gallery_contents .tab ul li:hover span {
+    width: 80%;
+    transform: skewX(-20deg);
+    opacity: 0.4;
+}
+
+.gallery .gallery_contents .tab ul li.on span {
+    width: 90%;
+}
+
+/* 오른쪽 이미지박스 */
+.gallery .gallery_contents .imgBox {
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    background-image: url(../img/photo_bg.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #000; */
+    overflow: hidden;
+}
+
+/* 탭바를 클릭하여 이미지가 돌아갈 때, 하단에 스크롤바가 생겼다 없어짐.
+= .imgBox에 position:relative 값을 주고 div영역의 크기를 100%로 채워서 해결 */
+.gallery .gallery_contents .imgBox>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    top: 0;
+    perspective: 800px;
+    transition: all 1.5s;
+}
+
+.gallery .gallery_contents .imgBox>div.on {
+    z-index: 2;
+    opacity: 1;
+}
+
+/* 박스 회전 설정*/
+.gallery .gallery_contents .imgBox>div>p {
+    transition: all 1.5s;
+    transform: rotateX(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .gallery_contents .imgBox>div.on p {
+    transform: rotateX(0deg);
+}
+
+.gallery .gallery_contents .imgBox>div>p span {
+    display: block;
+    font-size: 26px;
+    color: #fff;
+}
+
+/* photo 박스설정 */
+.imgBox .photo {
+    width: 100%;
+    /* display: none; */
+}
+
+.imgBox .photo>p {
+    float: left;
+    width: 25%;
+    height: 25%;
+    overflow: hidden;
+}
+
+.imgBox .photo>p:nth-child(1) {
+    background-color: #aaa;
+    width: 50%;
+    background-image: url(../img/photo01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.imgBox .photo>p:nth-child(2) {
+    background-color: #A00D0D;
+}
+
+.imgBox .photo>p:nth-child(3) {
+    background-color: #ccc;
+    background-image: url(../img/photo05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.imgBox .photo>p:nth-child(4) {
+    background-color: #ddd;
+    height: 50%;
+    background-image: url(../img/photo02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+
+}
+
+.imgBox .photo>p:nth-child(5) {
+    background-color: #222222;
+    
+
+
+}
+
+.imgBox .photo>p:nth-child(6) {
+    background-color: #999;
+    height: 50%;
+    width: 50%;
+    float: right;
+    background-image: url(../img/photo04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.imgBox .photo>p:nth-child(7) {
+    background-color: #888;
+    background-color: #A00D0D;
+    background-image: url(../img/photo03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+
+
+
+}
+
+.imgBox .photo>p:nth-child(8) {
+    background-color: #3d0000;
+}
+
+.imgBox .photo>p:nth-child(9) {
+    background-color: #666;
+    background-image: url(../img/photo08.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.imgBox .photo>p:nth-child(10) {
+    background-color: #555;
+    background-image: url(../img/photo06.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgBox .photo>p:nth-child(11) {
+    background-color: #444;
+    background-image: url(../img/photo07.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-.profile .profile_contents .img {
+/* Dailylife */
+.imgBox .Daily>p {
     width: 100%;
-    height: 86vh;
-    background-image: url(../img/profile.jpg);
+    float: left;
+    width: 25%;
+    height: 25%;
+    overflow: hidden;
+}
+
+.imgBox .Daily>p:nth-child(1) {
+    background-color: #999;
+    width: 50%;
+    height: 50%;
+    background-image: url(../img/daily01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.imgBox .Daily>p:nth-child(2) {
+    background-color: #6d0000;
+    width: 50%;
+
+}
+
+.imgBox .Daily>p:nth-child(3) {
+    background-color: #777;
+    background-image: url(../img/daily02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.imgBox .Daily>p:nth-child(4) {
+    background-color: #6d0000;
+    background-image: url(../img/daily03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgBox .Daily>p:nth-child(5) {
+    background-color: #555;
+    background-image: url(../img/daily04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.imgBox .Daily>p:nth-child(6) {
+    background-color: #A00D0D;
+}
+
+.imgBox .Daily>p:nth-child(7) {
+    background-color: #333;
+    background-image: url(../img/daily05.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 
 }
 
-/* 프로필 텍스트 설정 */
-.profile .profile_contents .img .txt {
-    width: 600px;
-    height: 400px;
-    /* background-color: aqua; */
-    position: absolute;
-    top: 50%;
-    margin-top: -200px;
-    left: 10%;
+.imgBox .Daily>p:nth-child(8) {
+    background-color: #222;
+    height: 50%;
+    float: right;
+    background-image: url(../img/daily08.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-.profile .profile_contents .img .txt h2 {
-    color: #C2B384;
-    font-family: 'Pattaya', sans-serif;
-    font-size: 60px;
-    letter-spacing: 10px;
+.imgBox .Daily>p:nth-child(9) {
+    background-color: #6d0000;
 
 }
 
-.profile .profile_contents .img .txt h2 span {
-    color: #D6D6D6;
-    font-size: 20px;
+.imgBox .Daily>p:nth-child(10) {
+    background-color: #ccc;
+    background-image: url(../img/daily06.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.imgBox .Daily>p:nth-child(11) {
+    background-color: #6d0000;
+    background-image: url(../img/daily07.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
 
 }
 
-.profile .profile_contents .img .txt h3 {
-    color: #fff;
-    font-size: 18px;
-    padding-top: 50px;
-    font-weight: normal;
-    line-height: 1.8;
+.imgBox .Daily>p:nth-child(12) {
+    background-color: #aaa;
+
 }
 
-.profile .profile_contents .img .txt h4 {
-    color: #fff;
-    font-size: 18px;
-    padding-top: 50px;
-    font-weight: normal;
-    line-height: 1.6;
-}
 
-/* Saint Laurent 영역 */
-.ysl {
+/* Video 영역 시작  ------------------------*/
+.video {
     width: 100%;
-    height: 3500px;
-    position: relative;
-    background-color: #000;
-}
-
-.ysl_contents {
-    width: 100%;
-    height: 3000px;
+    height: 1300px;
+    /* background-color: #000; */
+    background-image: url(../../img/profile_bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /* position: relative; */
     overflow: hidden;
-    position: relative;
 }
 
-/* 비디오 영역 */
-.ysl .ysl_contents .top {
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 90vh;
-    /* background-color: greenyellow; */
-}
-
-.ysl .ysl_contents .top .txt {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-right: 50px;
-}
-
-.ysl .ysl_contents .top .txt h2 {
-    color: #fff;
-    font-size: 60px;
-    letter-spacing: 6px;
-}
-
-.ysl .ysl_contents .top .txt h2:before {
-    content: "";
-    display: block;
-    width: 90%;
-    border-top: 2.5px solid #fff;
-}
-
-.ysl .ysl_contents .top .video {
-    width: 70%;
-    height: 64vh;
-}
-
-.ysl .ysl_contents .top .video video {
+.video .video_bg {
     width: 100%;
-    height: 100%;
+    height: 1300px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-
-.ysl .ysl_contents .center {
+.video_contents {
     width: 100%;
-    /* height: 1400px; */
-    background-color: aqua;
+    height: 100vh;
     max-width: 1600px;
-    margin:0 auto;
+    margin: 0 auto;
     position: relative;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
 
-.ysl .ysl_contents .center .img1 {
-    width: 500px;
-    height: 650px;
-    background-image: url(../img/ysl01.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.video_contents .left {
+    width: 600px;
+    height: 400px;
+    /* background-color: aqua; */
+    position: relative;
+    top: 20%;
     left: 0;
-    position: absolute;
+    margin-left: 50px;
 }
 
-
-.ysl .ysl_contents .center .img2 {
-    width: 500px;
-    height: 650px;
-    background-image: url(../img/ysl02.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.video_contents .right {
+    width: 600px;
+    height: 400px;
+    /* background-color: sandybrown; */
     position: absolute;
+    margin-top: 100px;
     right: 0;
-    top: 80vh;
+    top: 70%;
+    margin-right: 50px;
+
 }
 
+.video_contents .left .video1 {}
+
+.video_contents .right .video2 {}
 
 
-/* photo 영역 시작-------------------*/
-
-.photo {
+.video_contents .video1 iframe {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    height: 4000px;
-    background-color: #aaa;
+    height: 400px;
+    /* width: 34vw;
+    height: 46vh; */
+
 }
 
-.photo_contents {
-    background-color: aqua;
-    display: flex;
+.video_contents .video1 div {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(109, 0, 0, 0.6);
+    border-radius: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: scale(1.0);
+    transition: transform .5s;
 }
 
+
+
+.video_contents .video1:hover div {
+    transform: scale(2.0);
+    transition: transform 0.5s;
+
+}
+
+.video_contents .video2 iframe {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+}
+
+.video_contents .video2 div {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(109, 0, 0, 0.6);
+    border-radius: 100%;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transform: scale(1.0);
+    transition: transform .5s;
+}
+
+.video_contents .video2:hover div {
+    transform: scale(2.0);
+    transition: transform 0.5s;
+}
