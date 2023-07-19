@@ -251,12 +251,12 @@
 
     .reserBox .reserTxt {
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: center;
     }
 
     .reserBox .reserTxt li:nth-child(1) {
-        padding-left: 20px;
+        padding-left: 0px;
     }
 
     .reserBox .reserTxt li:nth-child(2) {
@@ -272,19 +272,13 @@
         margin-left: 20px;
     }
 
-
-    /* 
-    .reserBox .reserBtn li:nth-child(1) {
-        border-radius: 20px;
-        padding: 6px 22px;
-        transition: all 0.3s;
+    .reserBox .reserTxt li:nth-child(2) em {
+        letter-spacing: 5px;
     }
 
-    .reserBox .reserBtn li:nth-child(2) {
-        background-color: #F89939;
-        border-radius: 20px;
-        padding: 6px 22px;
-    } */
+    .reserBox .reserTxt li:nth-child(2) span {
+        padding-left: 10px;
+    }
 
 
     /* program(행사교육)설정 -----------------*/
@@ -789,6 +783,10 @@
 
     /* hero영역 ---------------*/
     /* 슬로건 설정 */
+    .hero .hero_slide {
+        height: 70vh;
+    }
+
     .hero .hero_slide .slogan {
         position: absolute;
         top: 50%;
@@ -1127,6 +1125,11 @@
 }
 
 @media screen and (max-width:650px) {
+    header .header_bottom .search a:nth-child(2){
+        display: none;
+    }
+
+
     /* 타이틀 전체 설정 */
 .title h2 {
     color: #5c82ee;
@@ -1139,6 +1142,19 @@
 
 .title p {
     font-size: 14px;
+}
+
+/* hero 영역 --------------- */
+#wrap .hero .hero_slide {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#wrap .hero .hero_slide ul {
+    width: 100%;
+    height: 80vh;
 }
 
     /* 슬로건 설정 */
@@ -1167,6 +1183,10 @@
     /* 관람시간 및 휴관 안내 */
     .reser_wrap .reserBox {
         display: none;
+    }
+
+    .reser_wrap {
+        height: 0px;
     }
 
     /* info설정 ------------*/
@@ -1198,27 +1218,28 @@
     }
 
     .info .info_contents .leftBox .imgList {
-        width: 380px;
-        height: 300px;
+        width: 80%;
+        height: 70%;
         position: absolute;
         left: 50%;
-        margin-left: -190px;
         top: 50%;
-        margin-top: -150px;
+        transform: translate(-50%, 0);
         overflow: hidden;
     }
 
     .info .info_contents .leftBox .imgList ul li {
-        width: 380px;
+        width: 100%;
         height: 300px;
     }
 
     /* 텍스트영역 설정 */
     .info .info_contents .rightBox {
-        width: 450px;
-        height: 200px;
-        margin-left: 60px;
+        width: 380px;
+        height: 140px;
+        margin-left: 0px;
         position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     .info .info_contents .rightBox h3,
@@ -1447,7 +1468,7 @@
     /* review 포토리뷰 영역-----------------*/
     .review {
         width: 100%;
-        height: 720px;
+        height: auto;
         padding-top: 70px;
         background-color: #FFEEAC;
     }
@@ -1477,8 +1498,8 @@
 
     .review .imgList {
         width: 100%;
-        height: 100%;
-        margin-bottom: 150px;
+        height: auto;
+        margin-bottom: 30px;
 
     }
 
@@ -1614,6 +1635,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
 }
 
 /* 왼쪽영역 설정 */
@@ -1624,7 +1646,7 @@ footer .left {
 }
 
 footer .left .adress {
-    padding-left: 16px;
+    padding-left: 14px;
 }
 
 footer .left .logo {
@@ -1632,12 +1654,14 @@ footer .left .logo {
     background-repeat: no-repeat;
     background-size: contain;
     text-indent: -99999px;
-    width: 138px;
-    height: 92px;
+    width: 70px;
+    height: 50px;
+    display: flex;
 }
 
 footer .left .adress>p {
     line-height: 22px;
+    font-size: 12px;
 }
 
 
@@ -1657,7 +1681,7 @@ footer .right .sns ul li {
 }
 
 footer .right .sns i {
-    font-size: 30px;
+    font-size: 24px;
     padding-left: 10px;
 }
 

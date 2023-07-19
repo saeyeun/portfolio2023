@@ -213,7 +213,7 @@ header .header_bottom .search a i {
 
 #wrap .hero .hero_slide {
     width: 100%;
-    height: 100vh;
+    height: 86vh;
     overflow: hidden;
     position: relative;
 }
@@ -1285,6 +1285,7 @@ footer .left .logo {
 
 footer .left .adress>p {
     line-height: 22px;
+    font-size: 14px;
 }
 
 

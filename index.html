@@ -1,18 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유새연포트폴리오</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유새연 포트폴리오</title>
+  <!-- 외부스타일시트 연결 -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 제이쿼리 CDN -->
+  <!-- <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script> -->
+
+  <!-- 외부스크립트 연결 -->
+  <script src="js/script.js"></script>
 </head>
+
 <body>
-    
-    <h1>유새연포트폴리오</h1>
-    <ul>
-        <li><a href="project001/index.html" target="_blank">프로젝트001-철도박물관</a></li>
-        <li><a href="project002/index.html" target="_blank">프로젝트002-제품형웹프로젝트</a></li>
-        <li><a href="project003/index.html" target="_blank">프로젝트003-인물형웹프로젝트</a></li>
-    </ul>
+  <header id="menu">
+    <div class="menu_wrap">
+      <h3><a href="#">2023 YooSaeYeon Portfolio</a></h3>
+      <h1><a href="#">SAEYEON YOO</a></h1>
+      <ul>
+        <li class="on"><a href="#">intro</a></li>
+        <li><a href="#">project</a></li>
+        <li><a href="#">profile</a></li>
+        <li><a href="#">skill</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="fullpage">
+    <section class="intro">
+      <div class="intro_wrap">
+        <div class="inner-header flex">
+
+          <h2>Portfolio</h2>
+          <!-- <p>유새연</p> -->
+        </div>
+
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(142, 149, 255, 0.4)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(248, 104, 93, 0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(142, 149, 255)" />
+            </g>
+          </svg>
+        </div>
+
+      </div>
+
+      <div class="content flex">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <!--Content ends-->
+    </section>
+
+    <!-- 프로젝트 영역 -->
+    <section class="project">
+      <div class="bg">
+        <div class="pj_wrap">
+          <h3>project</h3>
+          <ul>
+            <li class="pj01">
+              <div class="img"></div>
+              <div class="txt"></div>
+            </li>
+            <li class="pj02">2</li>
+            <li class="pj03">3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg_circle"></div>
+    </section>
+
+    <!-- 프로필 영역 -->
+    <section class="profile">
+      <div class="profile_wrap">
+        <div class="left">
+          <div class="txt">
+            <ul>
+              <li>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+              </li>
+              <li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="photo"></div>
+          <div class="keyword">
+            <h4>keyword</h4>
+            <ul>
+              <li>#000</li>
+              <li>#000</li>
+              <li>#000</li>
+              <li>#000</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="pro01">
+            <div class="pro_title">
+              <div class="circle"></div>
+              <h4>Personal info</h4>
+            </div>
+            <ul>
+              <li>
+                <p><span>name</span>유새연</p>
+              </li>
+              <li>
+                <p><span>birth</span>1996.00.00</p>
+              </li>
+              <li>
+                <p><span>mail</span>uysy1200@gmail.com</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pro02">
+            <div class="pro_title">
+              <div class="circle"></div>
+              <h4>Education</h4>
+            </div>
+            <ul>
+              <li>
+                <p>2023</p>
+              </li>
+              <li>
+                <p>
+                  NCS 포토샵/일러스트 수료</p>
+                <p>NCS UI/UX 반응형 웹디자인/웹퍼블리셔<br>
+                  개발 과정 수료
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="pro03">
+            <div class="pro_title">
+              <div class="circle"></div>
+              <h4>Certificate</h4>
+            </div>
+            <ul>
+              <li>
+                <p>ERP 정보관리사 인사 1급</p>
+              </li>
+              <li>
+                <p>컴퓨터활용능력 1급</p>
+              </li>
+              <li>
+                <p>운전면허 2종 보통</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pro04">
+            <div class="pro_title">
+              <div class="circle"></div>
+              <h4>Persinality</h4>
+            </div>
+            <div class="img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 스킬 영역 -->
+    <section>skill</section>
+    <section>outro</section>
+  </div>
 </body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </html>
