@@ -2,11 +2,11 @@ $(document).ready(function () {
 
 
     // 새로고침했을 때, 스크롤 맨위로 이동
-    window.onload = function () {
-        setTimeout(function () {
-            scrollTo(0, 0);
-        }, 100);
-    }
+    // window.onload = function () {
+    //     setTimeout(function () {
+    //         scrollTo(0, 0);
+    //     }, 100);
+    // }
 
     // hero영역 - 텍스트와 이미지가 양쪽 끝에서 중앙으로 순차적으로 모이게 설정    
     setTimeout(function () {
@@ -56,10 +56,10 @@ $(document).ready(function () {
     let a = 0
     // 오른쪽 화살표를 클릭했을 때
     $('.menu .arrow .right').click(function () {
-        if (a < 4)
+        if (a < 5)
             a++;
 
-        $('.menu article .imgList ul').css({ 'left': (-200) * a })
+        $('.menu article .imgList .listBox').css({ 'left': (-200) * a })
     })
 
     // 왼쪽 화살표를 클릭했을 때
@@ -67,7 +67,7 @@ $(document).ready(function () {
         if (a > 0)
             a--;
 
-        $('.menu article .imgList ul').css({ 'left': (-200) * a })
+        $('.menu article .imgList .listBox').css({ 'left': (-200) * a })
     })
 
     // TOP버튼 설정

@@ -1,4 +1,23 @@
 $(document).ready(function(){
+    // 2뎁스 메뉴 설정
+    $('header .header_bottom nav .gnb>li').mouseenter(function(){
+        if($( window ).width() > 996){
+            // height값 0으로 숨기기
+            $('.sub').css({'height': '0'})
+            // height값을 줘서 나타나게 하기
+            $(this).find('.sub').css({ 'height': '250px' ,'transition':'0.5s'})
+            // 배경 높이값 설정
+            $('.sub_bg').css({'height': '280px' })
+        }
+    })
+
+    $('nav').on('mouseleave',function(){
+        if($( window ).width() > 800){
+        //sub_bg와 모든 dep2 메뉴 위로 사라지게
+        $('.sub').css('height','0')
+        $('.sub_bg').css({ borderWidth : '0', height: '0' })
+        }
+    })
 
     // hero영역 슬라이드
     //btn li를 클릭했을 때 slide의 li가 같은 순번을 찾아 움직여라

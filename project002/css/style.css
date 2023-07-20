@@ -1,5 +1,6 @@
 @charset 'UTF-8';
-
+/* 제품 메뉴 텍스트 */
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 /* 타이틀폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 /* 로고폰트 */
@@ -19,6 +20,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 
 /* 전체설정 */
 * {
@@ -130,8 +132,6 @@ footer {
     max-width: 1400px;
     /* background-color: #999; */
 }
-
-
 
 
 /* 로고설정 */
@@ -540,9 +540,9 @@ footer {
         display: inline-block;
         padding: 8px 18px;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 14px;
         color: #494949;
-        letter-spacing: 2px;
+        letter-spacing: 1.2px;
         transition: all 0.6s;
     }
     #wrap .story .story_contents .txtBox .btn span:hover {
@@ -621,7 +621,6 @@ footer {
     margin: 0 auto;
     padding: 50px 20px;
     background: linear-gradient(180deg, #FFF2D1, #FF7347);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -678,11 +677,11 @@ footer {
 }
 
 .history .history_contents .left img {
-    width: 500px;
-    height: 500px;
+    width: 26vw;
+    height: 50vh;
     position: sticky;
     top: 70px;
-    left: 0;
+    left: 10%;
 }
 
 
@@ -713,7 +712,7 @@ footer {
 
 .history .history_contents .right .right_01 .img {
     background-image: url(../img/history01.jpg);
-    margin-right: 46px;
+    margin-right: 50px;
 }
 
 .history .history_contents .right .right_02 .img {
@@ -722,19 +721,19 @@ footer {
 
 .history .history_contents .right .right_03 .img {
     background-image: url(../img/history06.jpg);
-    margin-right: 46px;
-    margin-top: 30px;
+    margin-right: 50px;
+    margin-top: 100px;
 }
 
 .history .history_contents .right .right_04 .img {
     background-image: url(../img/history05.jpg);
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .history .history_contents .right .right_02,
 .right_04 {
     position: relative;
-    top: 100px;
+    top: 150px;
 
 }
 
@@ -757,7 +756,7 @@ footer {
 더 축소했을 때 슬라이드 사이에 빈공간 생김##### 
 -가로 길이를 %에서 px값으로 변경*/
 
-/* 제품 메뉴 영역  */
+/* 제품 메뉴 영역  ----------------------*/
 .menu {
     width: 100%;
     /* height: 100vh; */
@@ -794,36 +793,95 @@ footer {
     padding-top: 50px;
 }
 
-.menu article .imgList ul {
+
+
+.menu article .imgList .listBox {
     /* width: 2700px; */
     position: absolute;
     display: flex;
     height: 100%;
     left: 0;
-    transition: all 0.8s;
-
+    transition: all 0.5s;
     /* background-color: #D3FF56; */
 }
 
-.menu article .imgList ul li {
+.menu article .imgList .listBox>li {
     /* border: 1px solid #000; */
     box-sizing: border-box;
-    width: 300px;
+    width: 280px;
     height: 400px;
     overflow: hidden;
     margin: 0 20px;
-    transition: all 0.6s;
+    transition: all 0.3s;
+}
+.menu article .imgList .listBox>li>a>ul {
+    width: 270px;
+    height: 400px;
+    border-radius: 150px;
+    color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.menu article .imgList ul li:hover {
+/* 메뉴 배경색 */
+.menu article .imgList .listBox>li:nth-child(1)>a>ul,
+.menu article .imgList .listBox>li:nth-child(4)>a>ul,
+.menu article .imgList .listBox>li:nth-child(7)>a>ul {
+    background-color: #FFF59A;
+}
+
+.menu article .imgList .listBox>li:nth-child(2)>a>ul,
+.menu article .imgList .listBox>li:nth-child(5)>a>ul,
+.menu article .imgList .listBox>li:nth-child(8)>a>ul {
+    background-color: #FFE1EE;
+}
+
+.menu article .imgList .listBox>li:nth-child(3)>a>ul,
+.menu article .imgList .listBox>li:nth-child(6)>a>ul,
+.menu article .imgList .listBox>li:nth-child(9)>a>ul {
+    background-color: #CCE3FF;
+}
+
+.menu article .imgList .listBox>li:hover {
     transform: translateY(-80px);
 }
 
-.menu article .imgList ul li img {
-    width: auto;
+.menu article .imgList .listBox>li:hover a>ul>li:nth-child(3) {
+    transform: translateY(-80px);
+}
+
+/* 메뉴 텍스트&이미지 설정 */
+.menu article .imgList .listBox>li>a>ul>li:nth-child(1) p {
+    color: #FF7347;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.menu article .imgList .listBox>li>a>ul>li:nth-child(2) p {
+    font-size: 50px;
+    line-height: 1;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Train One', cursive;
+    color: #414141;
+}
+
+.menu article .imgList .listBox>li>a>ul>li:nth-child(3) {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transition: all 0.3s;
+}
+
+.menu article .imgList .listBox>li>a>ul>li:nth-child(3) img {
+    width: 100%;
     height: 100%;
 }
 
+/* 화살표 버튼 설정 */
 .menu article .arrow {
     display: block;
     width: 100%;
@@ -836,13 +894,14 @@ footer {
     position: absolute;
     left: 10px;
     top: 54%;
-    font-size: 60px;
+    font-size: 100px;
     color: #bfff0f;
     filter: drop-shadow(2px 2px 2px #88a000);
 }
+
 .menu article .arrow .right {
     position: absolute;
-    font-size: 60px;
+    font-size: 100px;
     right: 10px;
     top: 54%;
     color: #bfff0f;

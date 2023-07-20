@@ -150,24 +150,28 @@ header .header_bottom h1 {
 /* 내비 설정 */
 header .header_bottom nav {}
 
-header .header_bottom nav ul {
+header .header_bottom nav .gnb {
     display: flex;
     align-items: center;
 }
 
-header .header_bottom nav ul li {}
+header .header_bottom nav .gnb>li {
+    position: relative;
+    display:flex; 
+    align-items: center;
+}
 
-header .header_bottom nav ul li a {
+header .header_bottom nav .gnb > li > a {
     display: block;
     font-size: 18px;
-    padding: 10px 2px;
+    padding: 4px 10px;
     margin-right: 50px;
     color: #fff;
     position: relative;
     /* background-color: aqua; */
 }
 
-header .header_bottom nav ul li a:after {
+header .header_bottom nav .gnb > li > a:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -176,11 +180,11 @@ header .header_bottom nav ul li a:after {
     width: 0%;
     height: 4px;
     background: #fff;
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-out;
 
 }
 
-header .header_bottom nav ul li a:hover:after {
+header .header_bottom nav .gnb > li > a:hover:after {
     width: 100%;
 }
 
@@ -189,11 +193,52 @@ header .header_bottom .search a {
     color: #fff;
     font-size: 16px;
     margin-left: 8px;
+    display: block;
 }
 
 header .header_bottom .search a i {
     padding: 0 4px;
 }
+
+
+/* 2뎁스 메뉴 설정 */
+header .header_bottom nav .gnb > li .sub {
+    position: absolute;
+    top: 100%; 
+    margin-top: 30px;
+    width: 100%; 
+    z-index: 1;
+    overflow: hidden; 
+    height: 0;
+    /* background-color: #3F398C; */
+}
+
+header .header_bottom nav .gnb > li .sub > li > a {
+    /* background-color: yellow; */
+    padding: 14px 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4b4b4b;
+    padding-left: 20px;
+    letter-spacing: 1.6px;
+}
+
+header .header_bottom nav .gnb > li .sub > li > a:hover {
+    color: #5C82EE;
+}
+
+header .header_bottom .sub_bg {
+    position: absolute; 
+    width: 100vw; 
+    height: 0; 
+    transition: all 0.4s;
+    top: 100%; 
+    left: 0; 
+    z-index: -1;
+    background: rgba(234, 235, 255); 
+}
+
 
 /* 모바일 메뉴 설정 */
 /* 메뉴 버튼 */
@@ -203,6 +248,7 @@ header .header_bottom .search a i {
 
 .search .m_menu_btn i {
     font-size: 26px;
+    display: none;
 }
 
 /* hero영역 ---------------*/
@@ -256,13 +302,13 @@ header .header_bottom .search a i {
     text-align: center;
     color: #fff;
     z-index: 99;
+    letter-spacing: 1.6px;
 }
 
 .slogan h3 {
     font-size: 36px;
     line-height: 1.5;
 }
-
 
 .slogan p {
     font-size: 16px;

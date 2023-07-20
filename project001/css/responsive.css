@@ -386,10 +386,7 @@
     }
 
 }
-
-
-@media screen and (max-width:940px) {
-
+@media screen and (max-width:996px) {
     /* 헤더 설정 */
     header {
         width: 100%;
@@ -443,12 +440,11 @@
 
     .search .m_menu_btn i {
         font-size: 26px;
+        display: block;
     }
+}
 
-
-
-
-
+@media screen and (max-width:940px) {
     /* review 포토리뷰 영역-----------------*/
     .review {
         width: 100%;
