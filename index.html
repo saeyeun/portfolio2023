@@ -26,7 +26,7 @@
       <h3><a href="#">2023 YooSaeYeon Portfolio</a></h3>
       <h1><a href="#">SAEYEON YOO</a></h1>
       <ul>
-        <li class="on"><a href="#">intro</a></li>
+        <li class="on"><a href="#">main</a></li>
         <li><a href="#">project</a></li>
         <li><a href="#">profile</a></li>
         <li><a href="#">skill</a></li>
@@ -35,15 +35,18 @@
   </header>
 
   <div id="fullpage">
-    <section class="intro">
-      <div class="intro_wrap">
-        <div class="inner-header flex">
+    <section class="main">
+      <div class="main_wrap">
+        <div class="inner-main flex">
 
-          <h2>Portfolio</h2>
-          <!-- <p>유새연</p> -->
+          <div class="main_txt">
+            <h2>Portfolio</h2>
+            <p>안녕하세요! 유새연입니다.</p>
+          </div>
         </div>
 
         <div>
+          <!-- 물결 웨이브 효과 소스 -->
           <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
@@ -72,12 +75,75 @@
         <div class="pj_wrap">
           <h3>project</h3>
           <ul>
-            <li class="pj01">
-              <div class="img"></div>
-              <div class="txt"></div>
+            <li class="pj01 pj">
+              <div class="pj_title">
+                <span>공공형 리뉴얼 웹사이트</span>
+                <h4>철도박물관</h4>
+              </div>
+              <!-- pj01 사이트 연결 -->
+              <a href="http://usaeyeon.co.kr/project001/" target="_blank">
+                <div class="pj_img">
+                  <div class="img"></div>
+                </div>
+              </a>
+              <div class="pj_txt">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est provident error quia
+                  perferendis aperiam et harum, optio dolor laborum at nemo ratione ipsa magni? Repudiandae sequi quam
+                  itaque aut!</p>
+                <div class="btn">
+                  <button class="btn01">디자인 컨셉 보기</button>
+                  <a href="http://usaeyeon.co.kr/project001/" target="_blank">
+                    <button class="btn02">사이트 바로가기</button>
+                  </a>
+                </div>
+              </div>
             </li>
-            <li class="pj02">2</li>
-            <li class="pj03">3</li>
+            <li class="pj02 pj">
+              <div class="pj_title">
+                <span>제품형 리뉴얼 웹사이트</span>
+                <h4>이삭토스트</h4>
+              </div>
+              <!-- pj02 사이트 연결 -->
+              <a href="http://usaeyeon.co.kr/project002/" target="_blank">
+                <div class="pj_img">
+                  <div class="img"></div>
+                </div>
+              </a>
+              <div class="pj_txt">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est provident error quia
+                  perferendis aperiam et harum, optio dolor laborum at nemo ratione ipsa magni? Repudiandae sequi quam
+                  itaque aut!</p>
+                <div class="btn">
+                  <button class="btn01">디자인 컨셉 보기</button>
+                  <a href="http://usaeyeon.co.kr/project002/" target="_blank">
+                    <button class="btn02">사이트 바로가기</button>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="pj03 pj">
+              <div class="pj_title">
+                <span>인물형 페이지</span>
+                <h4>로제</h4>
+              </div>
+              <!-- pj03 사이트 연결 -->
+              <a href="http://usaeyeon.co.kr/project003/" target="_blank">
+                <div class="pj_img">
+                  <div class="img"></div>
+                </div>
+              </a>
+              <div class="pj_txt">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est provident error quia
+                  perferendis aperiam et harum, optio dolor laborum at nemo ratione ipsa magni? Repudiandae sequi quam
+                  itaque aut!</p>
+                <div class="btn">
+                  <button class="btn01">디자인 컨셉 보기</button>
+                  <a href="http://usaeyeon.co.kr/project003/" target="_blank">
+                    <button class="btn02">사이트 바로가기</button>
+                  </a>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -103,10 +169,10 @@
           <div class="keyword">
             <h4>keyword</h4>
             <ul>
-              <li>#000</li>
-              <li>#000</li>
-              <li>#000</li>
-              <li>#000</li>
+              <li>#섬세함</li>
+              <li>#습득력</li>
+              <li>#성실함</li>
+              <li>#노력</li>
             </ul>
           </div>
         </div>
@@ -139,9 +205,8 @@
                 <p>2023</p>
               </li>
               <li>
-                <p>
-                  NCS 포토샵/일러스트 수료</p>
-                <p>NCS UI/UX 반응형 웹디자인/웹퍼블리셔<br>
+                <p>NCS 포토샵/일러스트 수료</p>
+                <p>NCS UI/UX 반응형 웹디자인/웹퍼블리셔
                   개발 과정 수료
                 </p>
               </li>
@@ -178,6 +243,19 @@
     <!-- 스킬 영역 -->
     <section>skill</section>
     <section>outro</section>
+
+    <!-- 팝업설정 -->
+    <section id="popUp">
+      <div class="popUp_wrap">
+        <div class="popUp_01">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+        <div class="popUp_02"></div>
+        <div class="popUp_03"></div>
+      </div>
+    </section>
   </div>
 </body>
 <script type="text/javascript">

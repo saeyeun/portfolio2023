@@ -1,12 +1,27 @@
 $(document).ready(function () {
-
-
     // 새로고침했을 때, 스크롤 맨위로 이동
-    // window.onload = function () {
-    //     setTimeout(function () {
-    //         scrollTo(0, 0);
-    //     }, 100);
-    // }
+    window.onload = function () {
+        setTimeout(function () {
+            scrollTo(0, 0);
+        }, 100);
+    }
+
+    // 2뎁스 메뉴 설정
+    $('nav').mouseenter(function () {
+            // height값 0으로 숨기기
+            $('.depth2').css({ 'height': '0' })
+            // height값을 줘서 아래로 나타나게 하기
+            $(this).find('.depth2').css({ 'height': '250px', 'transition': '0.4s' })
+            // 배경 높이값
+            $('.depth2_bg').css({ 'height': '210px' })
+    })
+
+    $('nav').mouseleave(function () {
+            //sub_bg와 sub 메뉴 위로 사라지게 하기
+            $('.depth2').css('height', '0')
+            $('.depth2_bg').css({ 'height': '0' })
+    })
+
 
     // hero영역 - 텍스트와 이미지가 양쪽 끝에서 중앙으로 순차적으로 모이게 설정    
     setTimeout(function () {

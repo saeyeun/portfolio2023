@@ -148,7 +148,7 @@ header .header_bottom h1 {
 }
 
 /* 내비 설정 */
-header .header_bottom nav {}
+header .header_bottom nav {display: flex;}    
 
 header .header_bottom nav .gnb {
     display: flex;
@@ -157,7 +157,7 @@ header .header_bottom nav .gnb {
 
 header .header_bottom nav .gnb>li {
     position: relative;
-    display:flex; 
+    display: flex; 
     align-items: center;
 }
 
@@ -171,6 +171,7 @@ header .header_bottom nav .gnb > li > a {
     /* background-color: aqua; */
 }
 
+/* 마우스오버 효과 */
 header .header_bottom nav .gnb > li > a:after {
     content: "";
     position: absolute;
@@ -218,10 +219,9 @@ header .header_bottom nav .gnb > li .sub > li > a {
     padding: 14px 0;
     display: block;
     font-size: 16px;
-    font-weight: 500;
-    color: #4b4b4b;
+    color: #2b2b2b;
     padding-left: 20px;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.2px;
 }
 
 header .header_bottom nav .gnb > li .sub > li > a:hover {
@@ -236,7 +236,7 @@ header .header_bottom .sub_bg {
     top: 100%; 
     left: 0; 
     z-index: -1;
-    background: rgba(234, 235, 255); 
+    background: rgba(234, 235, 255, 0.8); 
 }
 
 
@@ -250,6 +250,8 @@ header .header_bottom .sub_bg {
     font-size: 26px;
     display: none;
 }
+
+.m_menu_bg .close {}
 
 /* hero영역 ---------------*/
 #wrap .hero {
@@ -323,6 +325,7 @@ header .header_bottom .sub_bg {
     left: 50%;
     margin-left: -40px;
     bottom: 18%;
+    margin-bottom: 30px;
 }
 
 #wrap .hero .btn ul {
@@ -512,7 +515,7 @@ header .header_bottom .sub_bg {
 }
 
 /* 이미지 삽입 */
-.info .info_contents .leftBox .imgList ul li:nth-child(1) {
+/* .info .info_contents .leftBox .imgList ul li:nth-child(1) {
     background-image: url(../img/info_01.png);
     background-size: cover;
     background-position: center center;
@@ -541,11 +544,17 @@ header .header_bottom .sub_bg {
     background-position: center center;
     background-repeat: no-repeat;
     opacity: 0;
-}
+} */
 
 .info .info_contents .leftBox .imgList ul li img {
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.info .info_contents .leftBox .imgList ul li.on img {
+    opacity: 1;
 }
 
 /* 텍스트영역 설정 */
@@ -600,6 +609,10 @@ header .header_bottom .sub_bg {
 
 .info .info_contents .rightBox .thumb li:hover {
     cursor: pointer;
+    box-shadow: 0 0 10px 5px #5C82EE;
+}
+
+.info .info_contents .rightBox .thumb li.on {
     box-shadow: 0 0 10px 5px #5C82EE;
 }
 
@@ -1181,7 +1194,6 @@ header .header_bottom .sub_bg {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    height: 80vh;
     position: relative;
 }
 
@@ -1195,8 +1207,9 @@ header .header_bottom .sub_bg {
     justify-content: center;
 }
 
-.map {
+.location .map {
     display: flex;
+    padding-bottom: 50px;
 }
 
 

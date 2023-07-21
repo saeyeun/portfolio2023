@@ -16,7 +16,6 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- 외부스크립트 연결 -->
     <script src="js/javascript.js"></script>
-
 </head>
 
 <body>
@@ -47,7 +46,7 @@
                 <a href="#">로고</a>
             </h1>
             <nav>
-                <ul class="gnb">
+                <ul class="gnb" id="gnb">
                     <li>
                         <a href="#">이용안내</a>
                         <ul class="sub">
@@ -98,10 +97,13 @@
                 <div class="sub_bg"></div>
             </nav>
             <div class="search">
-                <a href="#" class="m_menu_btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-search" aria-hidden="true"></i>검색</a>
+                <a href="#" class="m_menu_btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
             </div>
         </div>
+            <div class="m_menu_top">
+                <p class="close"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
     </header>
 
 
@@ -179,10 +181,10 @@
                             <h3 class="bg_txt">Railroad</h3>
                             <div class="imgList">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li class="on"><img src="img/info_01.png" alt=""></li>
+                                    <li><img src="img/info_02.png" alt=""></li>
+                                    <li><img src="img/info_03.png" alt=""></li>
+                                    <li><img src="img/info_04.png" alt=""></li>
                                 </ul>
                             </div>
                         </div>
@@ -207,10 +209,7 @@
                 </div>
             </div>
             <div class="img"><img src="img/trainline.png" alt=""></div>
-
         </section>
-
-
 
 
         <!-- program 행사 영역 -->
@@ -241,8 +240,6 @@
                         </ul>
                     </div>
                 </div>
-        
-        
             </div>
         </section>
         
@@ -325,7 +322,6 @@
                     <p class="btn">묻고답하기</p>
                 </div>
             </div>
-
         </section>
 
 
@@ -338,7 +334,6 @@
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </a>
             </div>
-
             <div class="imgList">
                 <ul>
                     <li><a href="#">
