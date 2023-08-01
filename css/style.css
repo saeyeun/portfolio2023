@@ -3,12 +3,13 @@
 
 /* 프로필 영역 텍스트 설정 */
 @import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 /* 전체설정 */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul,
@@ -29,16 +30,17 @@ body {
   background-color: #ccc;
 }
 
+html {
+  font-size: 10px;
+}
+
 /* 섹션설정 */
 section {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
   position: relative;
 }
-
-
-
 
 section:nth-child(1) {
   background-color: #F0F0F0;
@@ -46,7 +48,7 @@ section:nth-child(1) {
 
 section:nth-child(2) {
   background-color: #fff;
-  background-color: rgba(142, 149, 255);
+  background-color: #8e95ff;
 }
 
 section:nth-child(3) {
@@ -54,9 +56,9 @@ section:nth-child(3) {
   background-color: #F0F0F0;
 }
 
-section:nth-child(4) {
+/* section:nth-child(4) {
   background-color: #ddd;
-}
+} */
 
 section:nth-child(5) {
   background-color: #eee;
@@ -65,7 +67,6 @@ section:nth-child(5) {
 section:nth-child(1) {
   flex-direction: column;
 }
-
 
 
 /* 인트로 영역 -------------*/
@@ -290,6 +291,7 @@ section:nth-child(1) {
 
 /* 프로젝트 영역----------------- */
 .project {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,9 +300,9 @@ section:nth-child(1) {
 
 .project .bg {
   width: 100%;
-  height: 80vh;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+
 }
 
 .pj_wrap {
@@ -309,17 +311,32 @@ section:nth-child(1) {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
-.project h3 {
+.project .tilte {
   width: 100%;
-  height: 100px;
+  height: 14vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
   z-index: 99;
-  font-size: 30px;
+}
+
+.project .tilte h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.project .tilte p {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
 .project ul {
@@ -332,20 +349,23 @@ section:nth-child(1) {
 
 .project ul>li {
   width: 28%;
-  height: 64vh;
+  /* height: 60vh; */
   display: flex;
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 20px 20px 20px 20px;
   z-index: 99;
+  padding: 20px 10px;
 }
+
 
 /* 프로젝트 title설정 */
 .project ul .pj .pj_title {
   width: 100%;
-  height: 140px;
+  height: 80px;
+  /* padding: 10vh 0; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -354,14 +374,17 @@ section:nth-child(1) {
 }
 
 .project ul .pj .pj_title span {
-  font-size: 14px;
+  font-size: 1.4rem;
   padding-bottom: 2px;
+  color: #313131;
+  font-weight: bold;
 }
 
 .project ul .pj .pj_title h4 {
-  font-size: 30px;
+  font-size: 2.6rem;
+  color: #ffffff;
+  font-weight: bold;
 }
-
 
 /* 프로젝트 이미지 설정 */
 .project ul .pj .pj_img {
@@ -406,7 +429,6 @@ section:nth-child(1) {
   transform: translate(-50%, -50%);
   width: 0px;
   height: 0px;
-  /* 초기 크기 설정 */
   border-radius: 1500px;
   z-index: 0;
   transition: 1s ease-out;
@@ -425,15 +447,29 @@ section:nth-child(1) {
 }
 
 /* 프로젝트 text 설정 */
-.project .pj .pj_txt {}
+.project .pj .pj_txt {
+  width: 100%;
+  height: auto;
+}
+
 .project .pj .pj_txt p {
   padding: 0 40px;
   padding-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2a2a2a;
 }
 
+.project .pj .pj_txt p span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #202020;
+}
+
+/* 버튼설정 */
 .project .pj .pj_txt .btn {
   width: 100%;
-  height: 120px;
+  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -448,7 +484,13 @@ section:nth-child(1) {
   border: 0;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+
+.project .pj .pj_txt .btn .btn01:hover {
+  background-color: #3652D3;
+  color: #fff;
 }
 
 .project .pj .pj_txt .btn .btn02 {
@@ -458,75 +500,265 @@ section:nth-child(1) {
   border: 0;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
+  font-size: 1.4rem;
+  transition: all 0.3s;
 }
+
+.project .pj .pj_txt .btn .btn02:hover {
+  background-color: #3652D3;
+  color: #fff;
+}
+
+/* 팝업창 영역 -------------------------------- */
+.pop1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.pop1 .img {
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+
+.pop1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+/* close 버튼 설정 */
+.pop1 .close {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  margin-right: -60px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.pop1 .close i {
+  color: #fff;
+  font-size: 50px;
+}
+
+
+/* pop2 */
+.pop2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.pop2 .img {
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+
+.pop2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+/* close 버튼 설정 */
+.pop2 .close {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  margin-right: -60px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.pop2 .close i {
+  color: #fff;
+  font-size: 50px;
+}
+
+/* pop3 */
+.pop3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.pop3 .img {
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+
+.pop3 img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+/* close 버튼 설정 */
+.pop3 .close {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  margin-right: -60px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.pop3 .close i {
+  color: #fff;
+  font-size: 50px;
+}
+
+/* 스크롤 안보이게 설정 */
+.img::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* 프로필 영역 ------------------ */
 .profile {
   display: flex;
   align-items: center;
   color: #3d3d3d;
+  height: auto;
 }
 
 .profile .profile_wrap {
   width: 100%;
   height: 80vh;
-  max-width: 1400px;
+  max-width: 1800px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  flex-flow: row nowrap;
+  justify-content: center;
   padding: 0 58px;
   /* background-color: #333333; */
 }
 
 /* 프로필 왼쪽 영역 */
 .profile .profile_wrap .left {
-  width: 36%;
-  height: 80vh;
+  width: 40%;
+  height: 100vh;
   /* background-color: #bbb; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
+  padding: 100px 20px;
 }
 
-.profile .profile_wrap .left .txt {}
+.profile .profile_wrap .left .txt {
+  padding-bottom: 40px;
+}
+.profile .profile_wrap .left .txt h3 {
+  font-size: 4rem;
+  color: #3652D3;
+  font-family: 'Nothing You Could Do', cursive;
+}
+.profile .profile_wrap .left .txt h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.profile .profile_wrap .left .txt h4 span {
+  font-size: 2.4rem;
+  color: #5972df;
+  font-weight: bold;
+}
 
 .profile .profile_wrap .left .photo {
-  width: 12vw;
+  width: 40%;
   height: 30vh;
-  background-color: sandybrown;
+  /* background-color: sandybrown; */
 }
 
-.profile .profile_wrap .left .keyword {}
-
-.profile .profile_wrap .left .keyword ul {
-  display: flex;
+.profile .profile_wrap .left .photo .img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/profile.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+
 
 /* 프로필 오른쪽 영역 */
 .profile .profile_wrap .right {
   width: 50%;
-  height: 58vh;
-  /* background-colsor: salmon; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-flow: row wrap;
-  margin-top: 10vh;
-  margin-left: 10vw;
+  height: 100vh;
+  /* background-color: salmon; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
+  padding-top: 12vh;
+}
+
+.profile .profile_wrap .right .proBox01 {
+  /* background-color: red; */
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile .profile_wrap .right .proBox02 {
+  /* background-color: orange; */
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
-.profile .profile_wrap .right>div {
-  width: 20vw;
-  height: auto;
-  /* background-color:sandybrown; */
-}
-
-.profile .profile_wrap .right>div ul {
-  padding-top: 16px;
+.profile .profile_wrap .right .pro {
+  width: 100%;
+  height: 36vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* background-color: #3652d3; */
 }
 
 /* 오른쪽 영역 타이틀 설정 */
@@ -535,21 +767,18 @@ section:nth-child(1) {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: 60px;
+  /* background-color: #2a2a2a; */
 }
 
 .profile .profile_wrap .right .circle {
-  width: 100px;
+  width: 130px;
   display: inline;
   border: 1px solid #a47ebd;
   border-radius: 50%;
   padding: 18px 16px;
   position: absolute;
   transform: rotate(-12deg);
-}
-
-.profile .profile_wrap .right .pro01 .pro_title .circle {
-  width: 120px;
 }
 
 .profile .profile_wrap .right>div h4 {
@@ -573,6 +802,24 @@ section:nth-child(1) {
   font-size: 16px;
 }
 
+.profile .profile_wrap .right .keyword {
+  padding-top: 18px;
+}
+
+.profile .profile_wrap .right .keyword ul {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.profile .profile_wrap .right .keyword li {
+  border: 1px solid #3652D3;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  padding: 2px 10px;
+  font-weight: bold;
+}
+
 .profile .profile_wrap .right .pro01 ul>li p span {
   /* padding-right: 10px; */
   display: inline-block;
@@ -594,4 +841,130 @@ section:nth-child(1) {
 
 .profile .profile_wrap .right .pro02 ul li:nth-child(2) {
   padding-left: 50px;
+}
+
+
+.profile .profile_wrap .right .pro04 .img {
+  width: 54%;  
+  height: 20vh;
+  /* background-color: #170022; */
+  background-image: url(../img/profile02.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/* 스킬 영역 ---------------------- */
+.skill {
+  height: 100vh;
+  background-color: rgba(142, 149, 255);
+}
+
+.skill_wrap {
+  width: 70%;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* background-color: salmon; */
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.skill .skill_tilte {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill .skill_tilte h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.skill .skill_tilte p {
+  font-size: 2.6rem;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.skill .graph_wrap {
+  width: 100%;
+  height: 46vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 그래프 영역 */
+.skill .graph {
+  width: 100%;
+  height: 50vh;
+  /* background-color: sandybrown; */
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+}
+
+.skill .graph ul {
+  width: 14%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #aaa; */
+  justify-content: end;
+}
+
+.skill .graph ul>li:nth-child(1) {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  /* background-color: #140033; */
+  font-size: 2.2rem;
+}
+
+.skill .graph ul .bar {
+    width: 50%;
+    max-width: 50px;
+    height: 5%;
+    background: linear-gradient(to top, #3652D3 0%, rgba(248, 104, 93) 100%);
+    border-radius: 30px 30px 0px 0px;
+    transition: all 1.0s ease-out;
+}
+
+/* 그래프 높이 설정 */
+.skill.on .graph ul:nth-child(1) .bar { height: 80%;}
+.skill.on .graph ul:nth-child(2) .bar { height: 75%;}
+.skill.on .graph ul:nth-child(3) .bar { height: 85%;}
+.skill.on .graph ul:nth-child(4) .bar { height: 70%;}
+.skill.on .graph ul:nth-child(5) .bar { height: 60%;}
+.skill.on .graph ul:nth-child(6) .bar { height: 80%;}
+
+/* 하단 텍스트 */
+
+.skill .graph_txt {
+  width: 84%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: orange; */
+  margin-top: 2vh;
+}
+
+.skill .graph_txt li {
+  width: 8%;
+  font-size: 1.8rem;
+  /* background-color: #3652D3; */
+  text-align: center;
+  font-weight: bold;
 }

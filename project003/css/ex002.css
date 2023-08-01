@@ -46,7 +46,7 @@ nav {
     left: 50px;
     top: 50%;
     margin-top: -110px;
-    display: none;
+    /* display: none; */
 }
 
 nav ul {

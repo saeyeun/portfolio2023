@@ -18,6 +18,21 @@ $(document).ready(function () {
         }
     })
 
+    //스크롤이벤트
+    $(window).scroll(function (e) {
+        e.preventDefault()
+
+        let sc = $(this).scrollTop();
+
+        let aa = $('#wrap .program').offset().top;
+        if(sc>aa-600) {
+            $('.program .imgList').addClass('on')
+        } else {
+            $('.program .imgList').removeClass('on')
+        }
+
+    });
+
     // 모바일 메뉴 버튼 설정
     $('.m_menu_btn').click(function () {
         $('nav').animate({right:'0'}, 300, "linear");

@@ -8,6 +8,14 @@
     font-style: normal;
 }
 
+/* hero영역 슬로건 폰트 */
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* 본문 텍스트 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
 
@@ -219,9 +227,10 @@ header .header_bottom nav .gnb > li .sub > li > a {
     padding: 14px 0;
     display: block;
     font-size: 16px;
-    color: #2b2b2b;
+    color: #424242;
     padding-left: 20px;
     letter-spacing: 1.2px;
+    font-weight: bold;
 }
 
 header .header_bottom nav .gnb > li .sub > li > a:hover {
@@ -251,7 +260,9 @@ header .header_bottom .sub_bg {
     display: none;
 }
 
-.m_menu_bg .close {}
+.m_menu_top .close {
+    display: none;
+}
 
 /* hero영역 ---------------*/
 #wrap .hero {
@@ -277,7 +288,6 @@ header .header_bottom .sub_bg {
     height: 100%;
     left: 100%;
     top: 0;
-    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -285,18 +295,25 @@ header .header_bottom .sub_bg {
 #wrap .hero .hero_slide ul li:nth-child(1) {
     left: 0;
     background-image: url(../img/hero_01.png);
+    background-position: center top;
 }
+
 
 #wrap .hero .hero_slide ul li:nth-child(2) {
     background-image: url(../img/hero_02.png);
+    background-position: center top;
+
+    
 }
 
 #wrap .hero .hero_slide ul li:nth-child(3) {
-    background-image: url(../img/hero_04.png);
+    background-image: url(../img/hero_03.png);
+    background-position: center top;
 }
 
 /* 슬로건 설정 */
 .hero .hero_slide .slogan {
+    font-family: 'KorailRoundGothicBold';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -514,37 +531,6 @@ header .header_bottom .sub_bg {
     height: 400px;
 }
 
-/* 이미지 삽입 */
-/* .info .info_contents .leftBox .imgList ul li:nth-child(1) {
-    background-image: url(../img/info_01.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.info .info_contents .leftBox .imgList ul li:nth-child(2) {
-    background-image: url(../img/info_02.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 0;
-}
-
-.info .info_contents .leftBox .imgList ul li:nth-child(3) {
-    background-image: url(../img/info_03.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 0;
-}
-
-.info .info_contents .leftBox .imgList ul li:nth-child(4) {
-    background-image: url(../img/info_04.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 0;
-} */
 
 .info .info_contents .leftBox .imgList ul li img {
     width: 100%;
@@ -715,6 +701,14 @@ header .header_bottom .sub_bg {
     overflow: hidden;
     /* background-color: #b4c8ff; */
     margin-left: 50px;
+    transition: all 0.5s;
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.program .imgList.on {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 .program .imgList ul {
@@ -774,11 +768,6 @@ header .header_bottom .sub_bg {
 .notice {
     width: 100%;
     /* background-color: #2a2a2a; */
-    background-attachment: fixed;
-    background-image: url(../img/notice_bg01.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 }
 
 .notice_wrap {
@@ -794,10 +783,6 @@ header .header_bottom .sub_bg {
     justify-content: center;
     width: 100%;
     height: 200px;
-}
-
-.notice .title p {
-    color: #fff;
 }
 
 .notice .notice_wrap:after {
@@ -1065,11 +1050,6 @@ header .header_bottom .sub_bg {
     justify-content: center;
 }
 
-/* .con05_title p {
-    font-size: 20px;
-    margin-top: 10px;
-} */
-
 /* 자세히 보기 버튼 설정 */
 .review .title .moreBtn {
     color: #2a2a2a;
@@ -1114,9 +1094,7 @@ header .header_bottom .sub_bg {
     position: relative;
     box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.3);
 
-    /* transition: all 1.2s ease; */
-    /* transform: translateY(100px);
-    opacity: 0; */
+    
 }
 
 .review .imgList ul li:nth-child(1) .img {
