@@ -660,6 +660,7 @@ header .depth2_bg {
 .history .history_contents .left {
     width: 50%;
     position: relative;
+    height: 100vh;
 
 }
 
@@ -710,7 +711,7 @@ header .depth2_bg {
 
 .history .history_contents .right .right_04 .img {
     background-image: url(../img/history05.jpg);
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .history .history_contents .right .right_02,

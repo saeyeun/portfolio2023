@@ -122,7 +122,15 @@ $(document).ready(function () {
         $(this).addClass('on')
     });
 
-
+// video영역-----------------
+$('.video_contents .video1 iframe').mouseenter(function (e) {
+    // $('.bg_circle').css({ 'background': 'linear-gradient(180deg, #5C82EE, #FFEEAC)' })
+    $('.video').find('.video_contents .video1 div').addClass('active');
+});
+$('.video_contents .video1 iframe').mouseleave(function (e) {
+    // $('.bg_circle').css({ 'background': 'linear-gradient(180deg, #5C82EE, #FFEEAC)' })
+    $('.video').find('.video_contents .video1 div').removeClass('active');
+});
     
 
 

@@ -12,10 +12,14 @@ $(document).ready(function(){
 
 $('.main p em').mouseenter(function(){
     $('.cursor').addClass('style1')
+    $('.cursor').css({'background-color':'rgba(228, 0, 245, 0.51)'})
+    $('.main').addClass('show')
 })
 
 $('.main p em').mouseleave(function(){
     $('.cursor').removeClass('style1')
+    $('.cursor').css({'background-color':'#000'})
+    $('.main').removeClass('show')
 })
 
 

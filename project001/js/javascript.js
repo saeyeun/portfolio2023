@@ -37,7 +37,7 @@ $(document).ready(function () {
     $('.m_menu_btn').click(function () {
         $('nav').animate({right:'0'}, 300, "linear");
         $('.m_menu_top .close').animate({right:'0'}, 300, "linear");
-
+        
         })
     $('.close').click(function(){
         $('header .header_bottom nav').animate({right:'-100vw'}, 300, "linear");

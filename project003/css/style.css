@@ -988,24 +988,31 @@ brand영역이 왼쪽으로 이동할 값 */
 }
 
 .video_contents .video1 div {
-    width: 300px;
-    height: 300px;
     background-color: rgba(109, 0, 0, 0.6);
     border-radius: 100%;
     position: absolute;
     top: 20%;
     left: 0;
-    transform: scale(1.0);
-    transition: transform .5s;
+    width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  z-index: 0;
+  transition: 1s ease-out;
+  opacity: 0.6;
 }
 
+.video_contents .video1 div.active {
+    border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  opacity: 0.9;
+}
 
-
-.video_contents .video1:hover div {
+/* .video_contents .video1:hover div {
     transform: scale(2.0);
     transition: transform 0.5s;
 
-}
+} */
 
 .video_contents .video2 iframe {
     position: relative;
@@ -1015,15 +1022,24 @@ brand영역이 왼쪽으로 이동할 값 */
 }
 
 .video_contents .video2 div {
-    width: 300px;
-    height: 300px;
     background-color: rgba(109, 0, 0, 0.6);
     border-radius: 100%;
     position: absolute;
-    top: 10%;
-    right: 0;
-    transform: scale(1.0);
-    transition: transform .5s;
+    top: 20%;
+    left: 0;
+    width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  z-index: 0;
+  transition: 1s ease-out;
+  opacity: 0.6;
+}
+
+.video_contents .video2 div.active {
+    border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  opacity: 0.9;
 }
 
 .video_contents .video2:hover div {

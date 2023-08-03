@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,93 +8,113 @@
     <title>ex003예제
     </title>
     <style>
-        *{margin: 0;
-        padding: 0;}
-        body{height:3000px}
-        h1{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 3000px
+        }
+
+        h1 {
             position: fixed;
             left: 50px;
             top: 50px;
             z-index: 999;
         }
 
-        .box1 {width: 100%;
-        height: 100vh;
-        background-color: antiquewhite;
-    font-size: 300px;
-font-weight: bold;
-display: flex;
-justify-content: center;
-align-items: flex-end;
-background-image: url(./img/photo_bg.jpg);
-background-size: cover;
-background-clip: content-box;
+        .box1 {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(255, 165, 48);
+            font-size: 300px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-image: url(./img/photo_bg.jpg);
+            background-size: cover;
+            background-clip: content-box;
 
 
-/* 글씨를 투명하게 적용하여 배경을 넣는다. */
-color: transparent;
--webkit-text-fill-color: transparent;
-background-clip: text;
--webkit-background-clip: text;
-}
+            /* 글씨를 투명하게 적용하여 배경을 넣는다. */
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
 
-.box2 {
-    width: 100%;
-    height: 100vh;
-    border: 20px solid red;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-}
+        .box2 {
+            width: 100%;
+            height: 80vh;
+            border: 20px solid red;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
 
-.box2>p {
-    width: 2500px;
-    height: 500px;
-    background-color: violet;
-    position: absolute;
-    left: 200px;
-    top: 150px;
-}
+        .box2>p {
+            width: 2500px;
+            height: 500px;
+            background-color: violet;
+            position: absolute;
+            left: 200px;
+            top: 150px;
+        }
 
-.box2.fix {
-    position: fixed;
-    left: 0;
-    top: 0;
-}
+        .box2.fix {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
 
+        /* .box3 {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: aqua;
+        } */
     </style>
 
 
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script>
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            let sc = $(this).scrollTop();
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                let sc = $(this).scrollTop();
 
-            // 내장 객체를 이용하여 자연수 변환
-            let sNum = Math.floor(sc)
+                // 내장 객체를 이용하여 자연수 변환
+                let sNum = Math.floor(sc)
 
-            let bht = $('.box1').height()
+                let bht = $('.box1').height()
+                let bht2 = $('.box2').height()
 
-            let lsc = ((sNum-bht)/5);
-            $('h1').text((sNum-bht)/5);
+                let lsc = ((sNum - bht) / 5);
+                $('h1').text((sNum - bht) / 5);
 
 
-            if(sc>=bht){
-                $('.box2').addClass('fix')
-                $('.box2 p').css({'left':200-lsc})
-            }else {
-                $('.box2').removeClass('fix')
-            }
+                if (sc >= bht) {
+                    $('.box2').addClass('fix')
+                    $('.box2 p').css({ 'left': 200 - lsc })
+                } else {
+                    $('.box2').removeClass('fix')
+                }
+
+            })
         })
-    })
-</script>
+    </script>
 
 
 </head>
+
 <body>
     <h1>00</h1>
     <div class="box1">테스트박스</div>
-    <div class="box2"><p></p></div>
+    <div class="box2">
+        <p></p>
+    </div>
+    <div class="box3">pppp</div>
 </body>
+
 </html>
