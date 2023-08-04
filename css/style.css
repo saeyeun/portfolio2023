@@ -1,10 +1,10 @@
 @charset 'UTF-8';
-@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
 
 /* 프로필 영역 텍스트 설정 */
 @import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
 /* 전체설정 */
 * {
   margin: 0;
@@ -27,6 +27,7 @@ img {
 }
 
 body {
+  font-family: 'Noto Sans KR', sans-serif;
   background-color: #ccc;
 }
 
@@ -76,7 +77,7 @@ section:nth-child(1) {
 /* 메뉴 */
 #menu {
   width: 100%;
-  height: 70px;
+  height: 100px;
   display: flex;
   position: fixed;
   z-index: 999;
@@ -104,18 +105,19 @@ section:nth-child(1) {
 
 #menu ul li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   color: #2a2a2a;
   position: relative;
   transition: all .2s;
   padding: 2px 8px;
   margin-left: 14px;
   margin-bottom: 50px;
+  font-weight: 500;
 }
 
 #menu ul li a:hover {
   color: #2a2a2a;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 #menu ul li a:last-child {
@@ -141,11 +143,25 @@ section:nth-child(1) {
 }
 
 /* 로고 */
-#menu .menu_wrap h1 a {
-  font-size: 26px;
+
+#menu .menu_wrap h1 {
   z-index: 999;
-  color: #140033;
+  font-size: 24px;
+  transition: all 0.3s;
+  /* background-image: url(../img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat; */
 }
+
+#menu .menu_wrap h1 a {
+  color: #2a2a2a;
+}
+
+#menu .menu_wrap h1:hover {
+  cursor: pointer;
+  transform: rotate(10deg);
+}
+
 
 /* 세로 텍스트 */
 #menu .menu_wrap h3 {
@@ -167,13 +183,15 @@ section:nth-child(1) {
 .main .main_txt {
   position: fixed;
   z-index: 0;
+  top: 28%;
 }
 
 .main .inner-main h2 {
-  font-size: 120px;
+  font-size: 140px;
   color: #3652d3;
-  letter-spacing: 20px;
-  font-family: 'Rufina', serif;
+  letter-spacing: 16px;
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Rufina', serif; */
 }
 
 .main .inner-main p {
@@ -181,7 +199,9 @@ section:nth-child(1) {
   display: flex;
   flex-basis: 100%;
   align-items: center;
-  font-size: 20px;
+  font-size: 30px;
+  color: #4963db;
+  font-weight: 500;
 }
 
 .main .inner-main p:after {
@@ -300,7 +320,7 @@ section:nth-child(1) {
 
 .project .bg {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.14);
   z-index: 1;
 
 }
@@ -354,8 +374,9 @@ section:nth-child(1) {
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px 20px 20px 20px;
+  box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.1);
   z-index: 99;
   padding: 20px 10px;
 }
@@ -387,8 +408,13 @@ section:nth-child(1) {
 }
 
 /* 프로젝트 이미지 설정 */
+.project ul .pj a {
+  width: 100%;
+  height: auto;
+}
+
 .project ul .pj .pj_img {
-  width: 30vw;
+  width: 100%;
   height: 26vh;
   /* background-color: #ddd; */
   margin-bottom: 10px;
@@ -453,17 +479,14 @@ section:nth-child(1) {
 }
 
 .project .pj .pj_txt p {
-  padding: 0 40px;
-  padding-top: 10px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #2a2a2a;
+  text-align: center;
 }
 
 .project .pj .pj_txt p span {
   font-size: 1.6rem;
-  font-weight: bold;
-  color: #202020;
+  font-weight: 500;
+  color: #fff;
+  padding-right: 10px;
 }
 
 /* 버튼설정 */
@@ -471,13 +494,13 @@ section:nth-child(1) {
   width: 100%;
   margin-top: 5%;
   display: flex;
-  align-items: center;
   justify-content: center;
   /* background-color: salmon; */
 }
 
 .project .pj .pj_txt .btn .btn01 {
-  margin-right: 30px;
+  width: 300px;
+  margin-right: 10px;
   cursor: pointer;
   padding: 8px 20px;
   border-radius: 100px;
@@ -486,6 +509,8 @@ section:nth-child(1) {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   font-size: 1.4rem;
   transition: all 0.3s;
+  font-weight: 600;
+  color: #2a2a2a;
 }
 
 .project .pj .pj_txt .btn .btn01:hover {
@@ -493,7 +518,8 @@ section:nth-child(1) {
   color: #fff;
 }
 
-.project .pj .pj_txt .btn .btn02 {
+.project .pj .pj_txt .btn > a {
+  width: 300px;
   cursor: pointer;
   padding: 8px 20px;
   border-radius: 100px;
@@ -502,12 +528,29 @@ section:nth-child(1) {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   font-size: 1.4rem;
   transition: all 0.3s;
+  text-align: center;
+  
 }
 
-.project .pj .pj_txt .btn .btn02:hover {
+.project .pj .pj_txt .btn > a .btn02 {
+  border: 0;
+  background-color: transparent;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.project .pj .pj_txt .btn > a .btn02:hover {
+  cursor: pointer;
+}
+
+.project .pj .pj_txt .btn>a:hover {
   background-color: #3652D3;
   color: #fff;
 }
+
+.project .pj .pj_txt .btn>a:hover .btn02 {
+  color: #fff;
+} 
 
 /* 팝업창 영역 -------------------------------- */
 .pop1 {
@@ -656,7 +699,7 @@ section:nth-child(1) {
   display: flex;
   align-items: center;
   color: #3d3d3d;
-  height: auto;
+  height: 100vh;
 }
 
 .profile .profile_wrap {
@@ -673,7 +716,7 @@ section:nth-child(1) {
 
 /* 프로필 왼쪽 영역 */
 .profile .profile_wrap .left {
-  width: 40%;
+  width: 38%;
   height: 100vh;
   /* background-color: #bbb; */
   display: flex;
@@ -686,19 +729,21 @@ section:nth-child(1) {
 .profile .profile_wrap .left .txt {
   padding-bottom: 40px;
 }
+
 .profile .profile_wrap .left .txt h3 {
   font-size: 4rem;
   color: #3652D3;
   font-family: 'Nothing You Could Do', cursive;
 }
+
 .profile .profile_wrap .left .txt h4 {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 600;
   padding-top: 10px;
 }
 
 .profile .profile_wrap .left .txt h4 span {
-  font-size: 2.4rem;
+  font-size: 3rem;
   color: #5972df;
   font-weight: bold;
 }
@@ -721,7 +766,7 @@ section:nth-child(1) {
 
 /* 프로필 오른쪽 영역 */
 .profile .profile_wrap .right {
-  width: 50%;
+  width: 56%;
   height: 100vh;
   /* background-color: salmon; */
   display: flex;
@@ -729,6 +774,7 @@ section:nth-child(1) {
   justify-content: center;
   font-weight: 500;
   padding-top: 12vh;
+  padding-left: 8vh;
 }
 
 .profile .profile_wrap .right .proBox01 {
@@ -749,6 +795,7 @@ section:nth-child(1) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 50px;
 }
 
 
@@ -759,6 +806,10 @@ section:nth-child(1) {
   flex-direction: column;
   justify-content: start;
   /* background-color: #3652d3; */
+}
+
+.profile .profile_wrap .right .pro>ul {
+  padding-left: 50px;
 }
 
 /* 오른쪽 영역 타이틀 설정 */
@@ -795,29 +846,39 @@ section:nth-child(1) {
   letter-spacing: 1.8px;
 }
 
+/* 키워드 */
+.profile .profile_wrap .left .keyword {
+  padding-top: 18px;
+}
+
+.profile .profile_wrap .left .keyword ul {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.profile .profile_wrap .left .keyword li {
+  border: 1px solid #3652D3;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  padding: 2px 10px;
+  font-weight: 500;
+}
+
+
 /* 오른쪽 영역 본문 텍스트 */
 .profile .profile_wrap .right>div ul li p {
   margin-top: 5px;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
 }
-
-.profile .profile_wrap .right .keyword {
-  padding-top: 18px;
+.profile .profile_wrap .right .pro>ul {
+  padding-top: 20px;
 }
 
-.profile .profile_wrap .right .keyword ul {
-  display: flex;
-  margin-bottom: 6px;
-}
-
-.profile .profile_wrap .right .keyword li {
-  border: 1px solid #3652D3;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  margin-right: 10px;
-  padding: 2px 10px;
-  font-weight: bold;
+/* About me영역 */
+.profile .profile_wrap .right .pro01 ul>li {
+  padding-bottom: 8px;
 }
 
 .profile .profile_wrap .right .pro01 ul>li p span {
@@ -829,7 +890,7 @@ section:nth-child(1) {
   /* background-color: #170022; */
 }
 
-/* education영역 정렬 */
+/* Education영역*/
 .profile .profile_wrap .right .pro02 ul {
   display: flex;
 }
@@ -843,22 +904,89 @@ section:nth-child(1) {
   padding-left: 50px;
 }
 
+/* Certificate영역*/
+.profile .profile_wrap .right .pro03 ul {
+  /* margin-left: -120px; */
+}
 
+.profile .profile_wrap .right .pro03 ul>li {
+  padding-bottom: 8px;
+}
+
+/* Persinality영역*/
 .profile .profile_wrap .right .pro04 .img {
-  width: 54%;  
+  width: 54%;
   height: 20vh;
   /* background-color: #170022; */
   background-image: url(../img/profile02.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-left: 50px;
+}
+
+/* 프로필 구분선 */
+.line {
+  position: relative;
+  width: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line .line1 {
+  width: 2px;
+  background-color: #8e95ff;
+  height: 24%;
+}
+.line .line2 {
+  width: 2px;
+  background-color: #8e95ff;
+  height: 24%;
+}
+
+.line .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-image: url(../img/txt.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.line .star {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px;
+  transform: rotateY(0deg);
+  animation: ani 2.2s linear infinite;
+}
+
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 
 /* 스킬 영역 ---------------------- */
 .skill {
   height: 100vh;
-  background-color: rgba(142, 149, 255);
+  background-color: #8e95ff;
 }
 
 .skill_wrap {
@@ -912,7 +1040,7 @@ section:nth-child(1) {
   /* background-color: sandybrown; */
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1.5px solid #fff;
 }
 
 .skill .graph ul {
@@ -931,24 +1059,44 @@ section:nth-child(1) {
   text-align: center;
   /* background-color: #140033; */
   font-size: 2.2rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  letter-spacing: 1.2px;
 }
 
 .skill .graph ul .bar {
-    width: 50%;
-    max-width: 50px;
-    height: 5%;
-    background: linear-gradient(to top, #3652D3 0%, rgba(248, 104, 93) 100%);
-    border-radius: 30px 30px 0px 0px;
-    transition: all 1.0s ease-out;
+  width: 50%;
+  max-width: 50px;
+  height: 5%;
+  background: linear-gradient(to top, #3652D3 0%, rgba(248, 104, 93) 100%);
+  border-radius: 30px 30px 0px 0px;
+  transition: all 1.0s ease-out;
 }
 
 /* 그래프 높이 설정 */
-.skill.on .graph ul:nth-child(1) .bar { height: 80%;}
-.skill.on .graph ul:nth-child(2) .bar { height: 75%;}
-.skill.on .graph ul:nth-child(3) .bar { height: 85%;}
-.skill.on .graph ul:nth-child(4) .bar { height: 70%;}
-.skill.on .graph ul:nth-child(5) .bar { height: 60%;}
-.skill.on .graph ul:nth-child(6) .bar { height: 80%;}
+.skill.on .graph ul:nth-child(1) .bar {
+  height: 80%;
+}
+
+.skill.on .graph ul:nth-child(2) .bar {
+  height: 75%;
+}
+
+.skill.on .graph ul:nth-child(3) .bar {
+  height: 85%;
+}
+
+.skill.on .graph ul:nth-child(4) .bar {
+  height: 70%;
+}
+
+.skill.on .graph ul:nth-child(5) .bar {
+  height: 60%;
+}
+
+.skill.on .graph ul:nth-child(6) .bar {
+  height: 80%;
+}
 
 /* 하단 텍스트 */
 
@@ -963,8 +1111,39 @@ section:nth-child(1) {
 
 .skill .graph_txt li {
   width: 8%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   /* background-color: #3652D3; */
-  text-align: center;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+.skill .graph_txt li .icon {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: #000; */
+}
+
+.skill .graph_txt li:nth-child(1) .icon {
+  background-image: url(../img/ps.png);
+}
+
+.skill .graph_txt li:nth-child(2) .icon {
+  background-image: url(../img/ai.png);
+}
+.skill .graph_txt li:nth-child(3) .icon {
+  background-image: url(../img/html.png);
+}
+.skill .graph_txt li:nth-child(4) .icon {
+  background-image: url(../img/css.png);
+}
+.skill .graph_txt li:nth-child(5) .icon {
+  background-image: url(../img/js.png);
+}
+.skill .graph_txt li:nth-child(6) .icon {
+  background-image: url(../img/figma.png);
 }

@@ -29,7 +29,7 @@ $(document).ready(function () {
         // project li에 마우스를 올렸을 때 배경색 원이 커지게 설정
         // pj01
         $('.project ul>li:nth-child(1)').mouseenter(function (e) {
-                $('.bg_circle').css({ 'background': 'linear-gradient(180deg, #5C82EE, #FFEEAC)' })
+                $('.bg_circle').css({ 'background': 'linear-gradient(200deg,#FFEEAC, #5C82EE)' })
                 $('section').eq(1).find('.bg_circle').addClass('active');
         });
         $('.project ul>li:nth-child(1)').mouseleave(function (e) {
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
         // pj02
         $('.project ul>li:nth-child(2)').mouseenter(function (e) {
-                $('.bg_circle').css({ 'background': 'linear-gradient(180deg, #FF7347, #FFF2D1)' })
+                $('.bg_circle').css({ 'background': 'linear-gradient(200deg,#FFF2D1,#FF7347)' })
                 $('section').eq(1).find('.bg_circle').addClass('active');
         });
         $('.project ul>li:nth-child(2)').mouseleave(function (e) {
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
         //pj03 
         $('.project ul>li:nth-child(3)').mouseenter(function (e) {
-                $('.bg_circle').css({ 'background': 'linear-gradient(180deg, #E8E8E8, #810000)' })
+                $('.bg_circle').css({ 'background': 'linear-gradient(200deg, #E8E8E8, #810000)' })
                 $('section').eq(1).find('.bg_circle').addClass('active');
         });
         $('.project ul>li:nth-child(3)').mouseleave(function (e) {
