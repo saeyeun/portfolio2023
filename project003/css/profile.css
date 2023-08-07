@@ -92,8 +92,6 @@ body {
     color: #df0000;
 }
 
-
-
 .profile {
     position: fixed;
     background-color: aqua;
@@ -118,9 +116,7 @@ body {
     position: relative;
 }
 
-
 /* 이미지 요소 설정 */
-
 .profile li:hover{}
 .profile .img1 {
     width: 500px;

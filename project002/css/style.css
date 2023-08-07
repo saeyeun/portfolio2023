@@ -183,6 +183,12 @@ footer {
     padding: 10px;
     margin-right: 5px;
     color: #454545;
+    transition: all 0.1s;
+}
+
+#h_wrap header .nav_wrap .h_r_btn ul li i:hover {
+    cursor: pointer;
+    color: #FE5555;
 }
 
 #h_wrap header .nav_wrap .h_r_btn ul>li>p {
@@ -229,7 +235,6 @@ header .depth2_bg {
 }
 
 /* hero 영역 -------------------*/
-
 #h_wrap .hero {
     width: 100%;
     height: 86vh;
@@ -379,7 +384,6 @@ header .depth2_bg {
     margin-left: 50px;
 }
 
-
 #wrap .text_slide_wrap .text_slide img {
     width: 100%;
     height: auto;
@@ -431,7 +435,6 @@ header .depth2_bg {
 
 /* story 영역 ----------------------*/
 #wrap .story {
-
     background-color: #FFF2D1;
     width: 100%;
     height: 90vh;
@@ -510,6 +513,11 @@ header .depth2_bg {
     line-height: 1.8;
     text-align: center;
     padding-top: 40px;
+    letter-spacing: 1px;
+}
+
+#wrap .story article .story_contents .txtBox p span {
+    box-shadow: inset 0 -20px 0 #fff456;
 }
 
 /* story on값 설정 */
@@ -533,10 +541,11 @@ header .depth2_bg {
     display: inline-block;
     padding: 8px 18px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: #494949;
     letter-spacing: 1.2px;
     transition: all 0.6s;
+    font-weight: 500;
 }
 
 #wrap .story .story_contents .txtBox .btn span:hover {
@@ -601,16 +610,14 @@ header .depth2_bg {
 /*  History 영역 ------------------------ */
 .history {
     width: 100%;
-    /* position:sticky가 적용이 안됐었는데,
-    overflow:hidden 값을 없애서 해결 */
     /* overflow: hidden; */
+    height: 1800px;
     position: relative;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, #FFF2D1, #FF7347);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     /* margin-bottom:100px; */
 }
 
@@ -645,12 +652,11 @@ header .depth2_bg {
     font-size: 80px;
 }
 
-
 .history .history_contents {
     display: flex;
-    flex-flow: row nowrap;
     margin: 50px 0;
     width: 100%;
+    height: 1500px;
     /* background-color: #D3FF56; */
 }
 
@@ -658,28 +664,50 @@ header .depth2_bg {
 .history .history_contents .left {
     width: 50%;
     position: relative;
-    height: 100vh;
+    height: 1500px;
 
 }
 
-.history .history_contents .left img {
+.history .history_contents .left .l_toast {
     width: 26vw;
-    height: 50vh;
+    height: 28vh;
     position: sticky;
     top: 70px;
     left: 10%;
+}
+
+.history .history_contents .left .l_toast .img {
+    background-image: url(../img/history_toast.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
 /* 오른쪽영역 */
 .history .history_contents .right {
     width: 50%;
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
-    width: 100%;
-    max-width: 740px;
+    align-items: center;
     /* background-color: aqua; */
+}
 
+.history .history_contents .right01 {
+    margin-top: -30vh;
+}
+
+.history .history_contents .right01 .right01_2 {
+    margin-top: 150px;
+}
+
+.history .history_contents .right02 {
+    padding-left: 60px;
+    margin-top: 40vh;
+}
+
+.history .history_contents .right02 .right02_2 {
+    margin-top: 150px;
 }
 
 .history .history_contents .right .img {
@@ -691,51 +719,47 @@ header .depth2_bg {
     margin-bottom: 8px;
     box-shadow: 0 2px 18px rgba(87, 37, 14, 0.6);
 }
-
-.history .history_contents .right .right_01 .img {
+/* 이미지 삽입 */
+.history .history_contents .right01 .right01_1 .img {
     background-image: url(../img/history01.jpg);
-    margin-right: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.history .history_contents .right .right_02 .img {
+.history .history_contents .right01 .right01_2 .img {
     background-image: url(../img/history02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.history .history_contents .right .right_03 .img {
-    background-image: url(../img/history06.jpg);
-    margin-right: 50px;
-    margin-top: 100px;
+.history .history_contents .right02 .right02_1 .img {
+    background-image: url(../img/history03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.history .history_contents .right .right_04 .img {
-    background-image: url(../img/history05.jpg);
-    margin-top: 90px;
-}
-
-.history .history_contents .right .right_02,
-.right_04 {
-    position: relative;
-    top: 150px;
-
+.history .history_contents .right02 .right02_2 .img {
+    background-image: url(../img/history04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .history .history_contents .right span {
-    font-size: 26px;
-    color: #fff;
+    font-size: 40px;
+    color: #fffd8e;
     font-weight: bold;
     font-family: 'Racing Sans One', cursive;
     letter-spacing: 3px;
+    text-shadow: 2px 3px 2px #ff4141;
 }
 
 .history .history_contents .right>div p {
     font-size: 16px;
-    color: #292929;
+    color: #fff;
+    letter-spacing: 1.2px;
+    font-weight: 500;
 }
 
-
-/* 화면확대하거나 축소하면 이미지슬라이드의 이미지크기가 달라짐
-더 축소했을 때 슬라이드 사이에 빈공간 생김##### 
--가로 길이를 %에서 px값으로 변경*/
 /* 제품 메뉴 영역  ----------------------*/
 .menu {
     width: 100%;
@@ -845,9 +869,9 @@ header .depth2_bg {
 
 .menu article .imgList .listBox>li>a>ul>li:nth-child(3) {
     width: 200px;
-    height: auto;
+    height: 160px;
     position: absolute;
-    top: 50%;
+    top: 56%;
     transition: all 0.3s;
 }
 
@@ -884,9 +908,7 @@ header .depth2_bg {
 }
 
 
-
 /* vision 영역 -------------------------*/
-
 .vision {
     width: 100%;
     /* height: 100vh; */

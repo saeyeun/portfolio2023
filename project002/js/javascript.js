@@ -104,14 +104,21 @@ $(document).ready(function () {
 
     // 서브페이지
     // 수량부분에서 마이너스와 플러스를 클릭했을 때, 숫자가 늘어나거나 줄어들게 설정
-    let i = 1;
+    let i = 0;
     
     $('.product .p_wrap .p_buy .num ul li').eq(2).click(function(){
-        $('.product .p_wrap .p_buy .num ul li').eq(1).text(i++)
+        $('.product .p_wrap .p_buy .num ul li').eq(1).text(++i)
+        $('.h_r_btn p').text(i)
     })
 
     $('.product .p_wrap .p_buy .num ul li').eq(0).click(function(){
-        $('.product .p_wrap .p_buy .num ul li').eq(1).text(i--)
+        // 0미만으로 내려가지 않도록 설정
+        if(i-1<0){
+            i = 1
+        }
+
+        $('.product .p_wrap .p_buy .num ul li').eq(1).text(--i)
+        $('.h_r_btn p').text(i)
     })
 
 });//자바스크립트 끝

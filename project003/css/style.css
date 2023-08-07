@@ -26,9 +26,6 @@ img {
     vertical-align: bottom;
 }
 
-
-
-
 /* Main영역 시작 ------------------------*/
 #main {
     width: 100%;
@@ -113,8 +110,6 @@ img {
     transform: skewX(-20deg);
     opacity: 0.8;
 }
-
-
 
 /* 왼쪽 이미지&텍스트 정렬 */
 #main .main_contents {
@@ -298,8 +293,6 @@ img {
 /* 별도의 profile.css 파일로 설정 */
 
 
-
-
 /* Brand 영역 ------------------------*/
 /* play(영상) */
 .play {
@@ -315,7 +308,6 @@ img {
 }
 
 /* brand 소개*/
-
 .brand {
     position: fixed;
     left: 0;
@@ -475,10 +467,7 @@ brand영역이 왼쪽으로 이동할 값 */
     top: 50%;
     /* margin-top: -00px; */
     transition: all 1.2s;
-
 }
-
-
 
 .brand .circle .imgList {}
 
@@ -678,8 +667,6 @@ brand영역이 왼쪽으로 이동할 값 */
     overflow: hidden;
 }
 
-/* 탭바를 클릭하여 이미지가 돌아갈 때, 하단에 스크롤바가 생겼다 없어짐.
-= .imgBox에 position:relative 값을 주고 div영역의 크기를 100%로 채워서 해결 */
 .gallery .gallery_contents .imgBox>div {
     position: absolute;
     width: 100%;
@@ -747,7 +734,6 @@ brand영역이 왼쪽으로 이동할 값 */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
 }
 
 .imgBox .photo>p:nth-child(4) {
@@ -757,15 +743,10 @@ brand영역이 왼쪽으로 이동할 값 */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-
-
 }
 
 .imgBox .photo>p:nth-child(5) {
     background-color: #222222;
-    
-
-
 }
 
 .imgBox .photo>p:nth-child(6) {
@@ -786,10 +767,6 @@ brand영역이 왼쪽으로 이동할 값 */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    
-
-
-
 }
 
 .imgBox .photo>p:nth-child(8) {
@@ -844,7 +821,6 @@ brand영역이 왼쪽으로 이동할 값 */
 .imgBox .Daily>p:nth-child(2) {
     background-color: #6d0000;
     width: 50%;
-
 }
 
 .imgBox .Daily>p:nth-child(3) {
@@ -895,7 +871,6 @@ brand영역이 왼쪽으로 이동할 값 */
 
 .imgBox .Daily>p:nth-child(9) {
     background-color: #6d0000;
-
 }
 
 .imgBox .Daily>p:nth-child(10) {
@@ -912,12 +887,10 @@ brand영역이 왼쪽으로 이동할 값 */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-
 }
 
 .imgBox .Daily>p:nth-child(12) {
     background-color: #aaa;
-
 }
 
 
@@ -994,25 +967,19 @@ brand영역이 왼쪽으로 이동할 값 */
     top: 20%;
     left: 0;
     width: 0px;
-  height: 0px;
-  border-radius: 100%;
-  z-index: 0;
-  transition: 1s ease-out;
-  opacity: 0.6;
+    height: 0px;
+    border-radius: 100%;
+    z-index: 0;
+    transition: 1s ease-out;
+    opacity: 0.6;
 }
 
 .video_contents .video1 div.active {
     border-radius: 100%;
-  width: 300px;
-  height: 300px;
-  opacity: 0.9;
+    width: 300px;
+    height: 300px;
+    opacity: 0.9;
 }
-
-/* .video_contents .video1:hover div {
-    transform: scale(2.0);
-    transition: transform 0.5s;
-
-} */
 
 .video_contents .video2 iframe {
     position: relative;
@@ -1028,18 +995,18 @@ brand영역이 왼쪽으로 이동할 값 */
     top: 20%;
     left: 0;
     width: 0px;
-  height: 0px;
-  border-radius: 100%;
-  z-index: 0;
-  transition: 1s ease-out;
-  opacity: 0.6;
+    height: 0px;
+    border-radius: 100%;
+    z-index: 0;
+    transition: 1s ease-out;
+    opacity: 0.6;
 }
 
 .video_contents .video2 div.active {
     border-radius: 100%;
-  width: 300px;
-  height: 300px;
-  opacity: 0.9;
+    width: 300px;
+    height: 300px;
+    opacity: 0.9;
 }
 
 .video_contents .video2:hover div {
